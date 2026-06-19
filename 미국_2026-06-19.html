@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>ðºð¸ ë¯¸êµ­ì¦ì ë¸ë¦¬í | 2026.06.18</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --card2: #1c2333;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #3fb950;
+    --red: #f85149;
+    --gold: #d29922;
+    --blue: #58a6ff;
+    --purple: #bc8cff;
+    --accent: #1f6feb;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 12px;
+  }
+  /* ââ COVER ââ */
+  .cover {
+    background: linear-gradient(135deg, #0d1117 0%, #1a1f35 60%, #0d2040 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 20px 24px;
+    margin-bottom: 12px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(31,111,235,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .cover .flag { font-size: 32px; margin-bottom: 8px; }
+  .cover h1 { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .cover .date { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .cover .tagline {
+    margin-top: 14px;
+    background: rgba(31,111,235,0.15);
+    border: 1px solid rgba(31,111,235,0.3);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: var(--blue);
+    line-height: 1.5;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: rgba(63,185,80,0.12);
+    border: 1px solid rgba(63,185,80,0.3);
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 11px;
+    color: var(--green);
+    margin-top: 12px;
+  }
+
+  /* ââ SECTIONS ââ */
+  .section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .section-title .icon { font-size: 16px; }
+
+  /* ââ INDEX CARDS ââ */
+  .index-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .index-card {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 10px;
+  }
+  .index-card.full { grid-column: 1 / -1; }
+  .index-card .label { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+  .index-card .value { font-size: 16px; font-weight: 700; color: var(--text); }
+  .index-card .change { font-size: 12px; margin-top: 2px; }
+  .up { color: var(--green); }
+  .dn { color: var(--red); }
+  .neu { color: var(--muted); }
+
+  /* ââ NEWS ââ */
+  .news-item {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-left: 3px solid var(--accent);
+  }
+  .news-item:last-child { margin-bottom: 0; }
+  .news-no { font-size: 10px; color: var(--blue); font-weight: 700; margin-bottom: 4px; }
+  .news-title { font-size: 13px; font-weight: 600; line-height: 1.4; color: var(--text); }
+  .news-desc { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+  /* ââ TABLE ââ */
+  table { width: 100%; border-collapse: collapse; }
+  th {
+    font-size: 10px; color: var(--muted);
+    text-align: right; padding: 4px 6px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  th:first-child { text-align: left; }
+  td {
+    font-size: 12px; padding: 8px 6px;
+    border-bottom: 1px solid rgba(48,54,61,0.5);
+    text-align: right; white-space: nowrap;
+  }
+  td:first-child { text-align: left; font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  .ticker-link { color: var(--blue); text-decoration: none; font-weight: 700; }
+  .ticker-link:hover { text-decoration: underline; }
+  .krw { font-size: 11px; color: var(--muted); }
+
+  /* ââ ISSUE CARDS ââ */
+  .issue-card {
+    background: var(--card2);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-left: 3px solid;
+  }
+  .issue-card.pos { border-color: var(--green); }
+  .issue-card.neg { border-color: var(--red); }
+  .issue-card.neu { border-color: var(--muted); }
+  .issue-ticker { font-size: 11px; font-weight: 700; }
+  .issue-ticker.pos { color: var(--green); }
+  .issue-ticker.neg { color: var(--red); }
+  .issue-ticker.neu { color: var(--muted); }
+  .issue-text { font-size: 12px; color: var(--text); margin-top: 3px; line-height: 1.4; }
+
+  /* ââ ANALYSIS ââ */
+  .analysis-block {
+    background: var(--card2);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-left: 3px solid var(--gold);
+  }
+  .analysis-block h4 { font-size: 12px; color: var(--gold); font-weight: 700; margin-bottom: 6px; }
+  .analysis-block p { font-size: 12px; color: var(--text); line-height: 1.5; }
+
+  /* ââ SUMMARY ââ */
+  .summary-box {
+    background: linear-gradient(135deg, rgba(31,111,235,0.12), rgba(188,140,255,0.08));
+    border: 1px solid rgba(31,111,235,0.3);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  /* ââ FOOTER ââ */
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    padding: 12px 0 8px;
+    line-height: 1.5;
+  }
+  .disclaimer {
+    background: rgba(248,81,73,0.06);
+    border: 1px solid rgba(248,81,73,0.15);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  /* vix row */
+  .vix-row { display: flex; gap: 8px; }
+  .vix-row .index-card { flex: 1; }
+</style>
+</head>
+<body>
+
+<!-- â  íì§ -->
+<div class="cover">
+  <div class="flag">ðºð¸</div>
+  <h1>ë¯¸êµ­ì¦ì ë§ê° ë¸ë¦¬í</h1>
+  <div class="date">2026ë 6ì 18ì¼ (ëª©) Â· ë´ì ì ê·ì¥ ê¸°ì¤</div>
+  <div class="tagline">
+    ðï¸ ë¯¸Â·ì´ë MOU ì²´ê²° + ì¸í ê¸ë±ì¼ë¡<br>Fed ì¼í¬ ì´í ì¦ì ê°ë ¥ ë°ë±
+  </div>
+  <div class="badge">ð ëì¤ë¥ +1.91% Â· S&amp;P +1.08% Â· í¸ë¦¬íìì¹­</div>
+</div>
+
+<!-- â¡ 3ë ì§ì -->
+<div class="section">
+  <div class="section-title"><span class="icon">ð</span>ì£¼ì ì§ì</div>
+  <div class="index-grid">
+    <div class="index-card">
+      <div class="label">S&amp;P 500</div>
+      <div class="value up">7,500.58</div>
+      <div class="change up">â² +1.08% (+80.48)</div>
+    </div>
+    <div class="index-card">
+      <div class="label">ëì¤ë¥</div>
+      <div class="value up">26,517.93</div>
+      <div class="change up">â² +1.91% (+496.28)</div>
+    </div>
+    <div class="index-card">
+      <div class="label">ë¤ì°ì¡´ì¤</div>
+      <div class="value up">51,564.70</div>
+      <div class="change up">â² +0.14% (+72.15)</div>
+    </div>
+    <div class="index-card">
+      <div class="label">ë¬ì 2000</div>
+      <div class="value up">2,977.16</div>
+      <div class="change up">â² +2.02%</div>
+    </div>
+    <div class="index-card full">
+      <div class="label">ê³µí¬ì§ì (VIX)</div>
+      <div class="value neu">â 16.4</div>
+      <div class="change neu">ìì ê¶ Â· 3ì¼ ì  ê³ ì  ëë¹ ìí</div>
+    </div>
+  </div>
+</div>
+
+<!-- â¢ ì£¼ì ë´ì¤ -->
+<div class="section">
+  <div class="section-title"><span class="icon">ð°</span>ë°¤ì¬ì´ ì£¼ì ë´ì¤</div>
+
+  <div class="news-item">
+    <div class="news-no">ð ë´ì¤ 1</div>
+    <div class="news-title">ë¯¸êµ­Â·ì´ë MOU ìëª â í¸ë¥´ë¬´ì¦ ì¬ê°</div>
+    <div class="news-desc">í¸ë¼í ëíµë ¹ì´ ì´ëê³¼ ì ëíì ì¢ì MOUë¥¼ ê³µì ìëª. í¸ë¥´ë¬´ì¦ í´í ë´ì í´ì  ê¸°ëê°ì êµ­ì ì ê°(WTI $74.82) ê¸ë½, ìëì§ ì¸íë  ì°ë ¤ ìí.</div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-no">ð ë´ì¤ 2</div>
+    <div class="news-title">Fed ê¸ë¦¬ ëê²° â Warsh ìì¥ "ë°ì´í° ìì¡´" ì ì¸</div>
+    <div class="news-desc">FOMC ê¸°ì¤ê¸ë¦¬ 3.50~3.75% ëê²°. ë¨ 18ëª ìì ì¤ 9ëªì´ ì¬í´ ì¶ê° ì¸ì ì§ì§, 6ëªì ë³µì ì¸ì ì í¸. ì ì Warsh ìì¥ì 'ì ì ì  ê°ì´ëì¤ íì§'ë¥¼ ì ì¸í´ ìì¥ ë³ëì± ì ë°.</div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-no">ð ë´ì¤ 3</div>
+    <div class="news-title">ì¸í(INTC) +10.5% â ì íê³¼ ì¹© ì ì¡° íí¸ëì­</div>
+    <div class="news-desc">ë¯¸ ëíµë ¹ì´ ì¸í-ì í ë°ëì²´ íí¸ëì­ì ê³µìí. ë§ë¸ íí¬(+12.1%), ìëì¤í¬(+11.1%) ë± ë°ëì²´ì£¼ ëë° ê¸ë±. ë¯¸êµ­ ë°ëì²´ ê³µê¸ë§ ì¬í¸ ì í¸.</div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-no">ð ë´ì¤ 4</div>
+    <div class="news-title">ì¤íì´ì¤X(SPCX) -6.0% â IPO í ì°¨ìµì¤í</div>
+    <div class="news-desc">ì­ë ìµë IPO ê¸°ë¡ ë¬ì± ì´í ëª¨ë©í ëê°. ìì¥ í ì¶ì¸ ë§¤ëì¸. $185.23 ë§ê°.</div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-no">ð ë´ì¤ 5</div>
+    <div class="news-title">í¸ë¦¬í ìì¹­ + S&amp;P ë¶ê¸° ë¦¬ë°¸ë°ì±</div>
+    <div class="news-desc">ì£¼ììµìÂ·ì£¼ê°ì§ìì ë¬¼Â·ì£¼ê°ì§ììµì ëìë§ë£. ë´ì¼ ì£¼ëí´ì¤ í´ì¥ì¼ë¡ ì¤ëì´ í ì£¼ ë§ì§ë§ ê±°ëì¼. ì¥ íë° ëê·ëª¨ í¬ì§ì ì ë¦¬ ì§ì¤.</div>
+  </div>
+</div>
+
+<!-- â£ ë³´ì  ì¢ëª© -->
+<div class="section">
+  <div class="section-title"><span class="icon">ð¼</span>ë³´ì  ì¢ëª© íí©</div>
+  <div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>ì¢ëª©</th>
+        <th>íì¬ê°</th>
+        <th>1ì¼</th>
+        <th>1M</th>
+        <th>3M</th>
+        <th>6M</th>
+        <th>1Y</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <a class="ticker-link" href="https://m.stock.naver.com/worldstock/stock/NEE.N/total" target="_blank">NEE</a>
+          <div class="krw">â©130,004</div>
+        </td>
+        <td>$84.97</td>
+        <td class="dn">-1.01%</td>
+        <td class="dn">-5.9%</td>
+        <td class="up">+8.2%*</td>
+        <td class="up">+26%</td>
+        <td class="up">+20.5%</td>
+      </tr>
+      <tr>
+        <td>
+          <a class="ticker-link" href="https://m.stock.naver.com/worldstock/stock/SDGR.O/total" target="_blank">SDGR</a>
+          <div class="krw">â©23,669</div>
+        </td>
+        <td>$15.47</td>
+        <td class="dn">-0.4%</td>
+        <td class="dn">-18%*</td>
+        <td class="dn">-27%*</td>
+        <td class="dn">-31%*</td>
+        <td class="dn">-35%*</td>
+      </tr>
+      <tr>
+        <td>
+          <a class="ticker-link" href="https://m.stock.naver.com/worldstock/stock/META.O/total" target="_blank">META</a>
+          <div class="krw">â©884,585</div>
+        </td>
+        <td>$578.16</td>
+        <td class="up">+1.9%</td>
+        <td class="up">+2.4%*</td>
+        <td class="up">+6.1%*</td>
+        <td class="up">+12%*</td>
+        <td class="up">+18%*</td>
+      </tr>
+      <tr>
+        <td>
+          <a class="ticker-link" href="https://m.stock.naver.com/worldstock/stock/GOOGL.O/total" target="_blank">GOOGL</a>
+          <div class="krw">â©556,073</div>
+        </td>
+        <td>$363.44</td>
+        <td class="up">+1.1%</td>
+        <td class="up">+4.2%*</td>
+        <td class="up">+18%*</td>
+        <td class="up">+45%*</td>
+        <td class="up">+112%</td>
+      </tr>
+      <tr>
+        <td>
+          <a class="ticker-link" href="https://m.stock.naver.com/worldstock/stock/AMD.O/total" target="_blank">AMD</a>
+          <div class="krw">â©784,094</div>
+        </td>
+        <td>$512.48</td>
+        <td class="up">+2.8%*</td>
+        <td class="up">+15%*</td>
+        <td class="up">+42%*</td>
+        <td class="up">+85%*</td>
+        <td class="up">+267%</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div style="font-size:10px;color:var(--muted);margin-top:6px;">* ì¶ì ì¹ | USD/KRW 1,530 ê¸°ì¤ | í¬ì ì¡°ì¸ ìë</div>
+</div>
+
+<!-- â¤ ë³´ì  ì¢ëª© ì´ì -->
+<div class="section">
+  <div class="section-title"><span class="icon">ð</span>ë³´ì  ì¢ëª© ìµì  ì´ì</div>
+
+  <div class="issue-card pos">
+    <div class="issue-ticker pos">AMD â² +2.8%</div>
+    <div class="issue-text">ì ëë¦¬ì¤í¸ ëª©íê° ìí¥ (Bank of America, $650). Q1 ë°ì´í°ì¼í° ë§¤ì¶ í­ë°ì  ì±ì¥ í ëª¨ë©í ì§ì. MI300X AI ì¹© ìì ê°ì¸. ì°ì´ ëë¹ +66% ì´ê°ì¸.</div>
+  </div>
+
+  <div class="issue-card pos">
+    <div class="issue-ticker pos">GOOGL â² +1.1%</div>
+    <div class="issue-text">ì¤í í¼ë ì¡¸ìì ìë¤ë¥´ í¼ì°¨ì´ ì°ì¤ ë¼ëìë ì£¼ê° ê²¬ì¡°. Gemini AI ëª¨ë¸ ìë°ì´í¸ ë° í´ë¼ì°ë ë¶ë¬¸ í¸ì¡°ë¡ 12ê°ì +112% ë¬ì±. AI ê²ì ì ì ì¨ ì ì§.</div>
+  </div>
+
+  <div class="issue-card pos">
+    <div class="issue-ticker pos">META â² +1.9%</div>
+    <div class="issue-text">Llama AI ëª¨ë¸ ê´ê³  ììµí ê°ì. Reality Labs VR ë§¤ì¶ ê°ì . ëì¤ë¥ ë°ë± ìíì£¼ë¡ ë¹ì¼ ìì¥ íê·  ìí. ê´ê³  íë«í¼ AI ê³ ëíë¡ ë§ì§ ê°ì  ì¶ì¸.</div>
+  </div>
+
+  <div class="issue-card neg">
+    <div class="issue-ticker neg">NEE â¼ -1.01%</div>
+    <div class="issue-text">ì ê° íë½âì²ì°ê°ì¤ ìì ì°ë ¤ë¡ ì í¸ë¦¬í° ì¹í° ìí­ ì½ì¸. ë¨ê¸° ì¡°ì  ì¤ì´ë AI ë°ì´í°ì¼í° ì ë ¥ ìì íë ìí ê¸°ëë¡ 6ê°ì ê¸°ì¤ +26% ìí¸. ë°°ë¹ ìì ì± ì ì§.</div>
+  </div>
+
+  <div class="issue-card neg">
+    <div class="issue-ticker neg">SDGR â¼ -0.4%</div>
+    <div class="issue-text">Q1 2026 ì¤ì  â ë§¤ì¶ $58.6Mì¼ë¡ ìì ìííì¼ë ìì¤ í­ íëë¡ ì¤ë§. ì°ì´ ëë¹ -35% ëí­ íë ì¤. íí¸ëì­ ì ì½ íì´íë¼ì¸ ì§ì  ì§ì ì£¼ì íì.</div>
+  </div>
+</div>
+
+<!-- â¥ ë¹íí¬ íí© -->
+<div class="section">
+  <div class="section-title"><span class="icon">ð</span>ë§¤ê·¸ëí¼ì¼í¸7 + ì¤íì´ì¤X</div>
+  <table>
+    <thead>
+      <tr>
+        <th>ì¢ëª©</th>
+        <th>íì¬ê°</th>
+        <th>1ì¼</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>AAPL <span style="font-size:10px;color:var(--muted)">Apple</span></td>
+        <td>$298.49</td>
+        <td class="up">â² +0.9%</td>
+      </tr>
+      <tr>
+        <td>MSFT <span style="font-size:10px;color:var(--muted)">Microsoft</span></td>
+        <td>$379.62</td>
+        <td class="up">â² +0.2%</td>
+      </tr>
+      <tr>
+        <td>NVDA <span style="font-size:10px;color:var(--muted)">Nvidia</span></td>
+        <td>$210.95</td>
+        <td class="up">â² +3.1%</td>
+      </tr>
+      <tr>
+        <td>AMZN <span style="font-size:10px;color:var(--muted)">Amazon</span></td>
+        <td>$244.65</td>
+        <td class="up">â² +3.0%</td>
+      </tr>
+      <tr>
+        <td>GOOG <span style="font-size:10px;color:var(--muted)">Alphabet</span></td>
+        <td>$367.82</td>
+        <td class="up">â² +1.6%</td>
+      </tr>
+      <tr>
+        <td>META <span style="font-size:10px;color:var(--muted)">Meta</span></td>
+        <td>$578.16</td>
+        <td class="up">â² +1.9%</td>
+      </tr>
+      <tr>
+        <td>TSLA <span style="font-size:10px;color:var(--muted)">Tesla</span></td>
+        <td>$401.25</td>
+        <td class="up">â² +1.2%</td>
+      </tr>
+      <tr>
+        <td>SPCX <span style="font-size:10px;color:var(--muted)">SpaceX ETF</span></td>
+        <td>$185.23</td>
+        <td class="dn">â¼ -3.4%</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="font-size:10px;color:var(--muted);margin-top:6px;">SPCX: IPO í ì°¨ìµì¤í ë§¤ë¬¼ ì¶í</div>
+</div>
+
+<!-- â¦ ììì¬/ê¸ë¦¬/íì¨ -->
+<div class="section">
+  <div class="section-title"><span class="icon">ð¢ï¸</span>ììì¬ Â· ê¸ë¦¬ Â· íì¨</div>
+  <table>
+    <thead>
+      <tr>
+        <th>í­ëª©</th>
+        <th>íì¬</th>
+        <th>ì ì¼ë¹</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ð¡ ê¸ (Gold)</td>
+        <td>$4,252/oz</td>
+        <td class="dn">-1.80%</td>
+      </tr>
+      <tr>
+        <td>âª ì (Silver)</td>
+        <td>$67/oz</td>
+        <td class="dn">-1.5%*</td>
+      </tr>
+      <tr>
+        <td>ð  êµ¬ë¦¬ (Copper)</td>
+        <td>$4.48/lb*</td>
+        <td class="neu">Â±0%*</td>
+      </tr>
+      <tr>
+        <td>ðµ ìë£¨ë¯¸ë</td>
+        <td>$2,540/t*</td>
+        <td class="neu">Â±0%*</td>
+      </tr>
+      <tr>
+        <td>ð¥ ì²ì°ê°ì¤</td>
+        <td>$3.15/MMBtu</td>
+        <td class="up">+0.05%</td>
+      </tr>
+      <tr>
+        <td>ð¢ WTI ìì </td>
+        <td>$74.82/bbl</td>
+        <td class="dn">-2.57%</td>
+      </tr>
+      <tr>
+        <td>ð¢ ë¸ë í¸ì </td>
+        <td>$79.46/bbl</td>
+        <td class="dn">-1.63%</td>
+      </tr>
+      <tr style="border-top: 1px solid var(--border)">
+        <td>ð¦ ë¯¸êµ­ì± 2ë</td>
+        <td>4.20%</td>
+        <td class="neu">-</td>
+      </tr>
+      <tr>
+        <td>ð¦ ë¯¸êµ­ì± 10ë</td>
+        <td>4.434%</td>
+        <td class="dn">-0.52%</td>
+      </tr>
+      <tr>
+        <td>ð¦ ë¯¸êµ­ì± 30ë</td>
+        <td>4.93%</td>
+        <td class="neu">-</td>
+      </tr>
+      <tr style="border-top: 1px solid var(--border)">
+        <td>ð± USD/KRW</td>
+        <td>â©1,530</td>
+        <td class="neu">-</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="font-size:10px;color:var(--muted);margin-top:6px;">* ì¶ì ì¹ í¬í¨ | ê¸Â·ì ê° íë½: ì´ë MOU ì²´ê²° ìí¥</div>
+</div>
+
+<!-- â§ íêµ­ ì¦ì ìí¥ ë¶ì -->
+<div class="section">
+  <div class="section-title"><span class="icon">ð°ð·</span>íêµ­ ì¦ì ìí¥ ë¶ì</div>
+
+  <div class="analysis-block">
+    <h4>â ê¸ì ì  ìí¥ ìì¸</h4>
+    <p>
+      ëì¤ë¥ +1.91%, S&amp;P +1.08%ì ê°í ë°ë±ì <b>ì½ì¤í¼Â·ì½ì¤ë¥ ëë° ìì¹</b>ì ê¸°ëíê² í©ëë¤.
+      í¹í ë°ëì²´ ì¹í°(NVDA +3.1%, AMD +2.8%)ì ê°ì¸ë <b>ì¼ì±ì ìÂ·SKíì´ëì¤</b> ê°ë³´í© ê¸°ë.
+      ì ê° ê¸ë½(-2.6%)ì ë¬´ì­ìì§Â·ìê° ì¸¡ë©´ìì íêµ­ ìì¶ ê¸°ìì í¸ì¬ìëë¤.
+      ìë¬ë¬ íì¨ 1,530ì ìì¤ì ìì¶ ê¸°ì ì¤ì ì ì°í¸ì .
+    </p>
+  </div>
+
+  <div class="analysis-block">
+    <h4>â ï¸ ë¶íì¤ì± ìì¸</h4>
+    <p>
+      Warsh Fed ìì¥ì 'ì¶ê° ê¸ë¦¬ ì¸ì' ê°ë¥ì± ìì¬ë <b>ê¸ë¡ë² ë¬ë¬ ê°ì¸Â·ì í¥êµ­ ìê¸ ì´í</b> ìë ¥ ìì¸.
+      ì¤íì´ì¤X IPO í ì°¨ìµì¤í(-6%)ì¼ë¡ <b>ë¹íí¬ ë¨ê¸° ì°¨ìµì¤í ì¬ë¦¬</b> íì° ê°ë¥ì±.
+      í¸ë¦¬í ìì¹­ ì´í ë³ëì± ì¬íëì ì£¼ì.
+      ë¯¸Â·ì´ë MOUë íì ì¤ ì¸ì ë  íê¸° ê°ë¥í <b>ì§ì í ë¦¬ì¤í¬ ë´ì¬</b>.
+    </p>
+  </div>
+
+  <div class="analysis-block">
+    <h4>ð ì£¼ëª© ì¹í°</h4>
+    <p>
+      <b>ë°ëì²´Â·AI ì¸íë¼</b>: AMDÂ·NVDA ê°ì¸ë¡ HBMÂ·íì´ëë¦¬ ê´ë ¨ì£¼ ìí ê¸°ë.
+      <b>ë°©ì°Â·ìëì§</b>: ì´ë ê¸´ì¥ ìíë¡ ë¨ê¸° ì¡°ì  ê°ë¥.
+      <b>2ì°¨ì ì§</b>: íì¬ë¼ +1.2%ë¡ ë°°í°ë¦¬ ê´ë ¨ì£¼ ìí­ ì°í¸.
+      <b>ì í¸ë¦¬í°</b>: NEE ì½ì¸ íë¦ êµ­ë´ ì í¸ë¦¬í°ìë ìí¥ ì íì .
+    </p>
+  </div>
+</div>
+
+<!-- â¨ í ì¤ ìì½ -->
+<div class="section">
+  <div class="section-title"><span class="icon">ð¡</span>í ì¤ ìì½</div>
+  <div class="summary-box">
+    "Fed ê¸ë¦¬ ëê²° í ìì¥ ë¶ì ëê³ <br>ë¯¸Â·ì´ë MOU + ì¸í ê¸ë±ì íìì´<br>
+    ëì¤ë¥ +1.91% ê°ë ¥ ë°ë± â ë°ëì²´Â·AI ì£¼ë, ì ê° íë½ ìí"
+  </div>
+</div>
+
+<!-- footer -->
+<div class="disclaimer">
+  â ï¸ ë³¸ ë¸ë¦¬íì ì ë³´ ì ê³µ ëª©ì ì´ë©° <b>í¬ì ê¶ì ê° ìëëë¤.</b><br>
+  í¬ì ê²°ì ì ë³¸ì¸ì íë¨ê³¼ ì±ì íì íìê¸° ë°ëëë¤.
+</div>
+<div class="footer">
+  ë°ì´í° ì¶ì²: The Motley Fool, Fortune, TheStreet Â· 2026.06.18<br>
+  <a href="https://nossang123451.github.io/market-briefing/ë¯¸êµ­_2026-06-18.html" style="color:var(--blue);">ð ê³µê° ì¹´ë URL</a>
+</div>
+
+</body>
+</html>
