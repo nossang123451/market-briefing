@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>미국증시 브리핑 2026-06-25</title>
+<style>
+  :root {
+    --bg: #0d0d0d; --card: #161616; --card2: #1e1e1e; --border: #2a2a2a;
+    --accent: #00d4aa; --accent2: #7b61ff;
+    --red: #ff4757; --green: #2ed573; --yellow: #ffa502;
+    --text: #f0f0f0; --muted: #888; --white: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system,'Noto Sans KR',sans-serif; max-width: 480px; margin: 0 auto; padding: 0 0 40px 0; }
+  .cover { background: linear-gradient(145deg,#0f1923,#1a2a3a,#0d1f2d); padding: 36px 24px 28px; text-align: center; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+  .cover::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 60% 20%,rgba(0,212,170,.12),transparent 60%); }
+  .cover .flag { font-size:36px; }
+  .cover h1 { font-size:22px; font-weight:800; margin-top:8px; color:var(--white); }
+  .cover .date { font-size:13px; color:var(--accent); margin-top:6px; font-weight:600; }
+  .cover .sub { font-size:12px; color:var(--muted); margin-top:4px; }
+  .cover .badge { display:inline-block; margin-top:14px; background:rgba(0,212,170,.15); border:1px solid rgba(0,212,170,.3); color:var(--accent); font-size:11px; font-weight:700; padding:5px 14px; border-radius:20px; }
+  .section { padding: 20px 16px 0; }
+  .section-title { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-bottom:12px; display:flex; align-items:center; gap:6px; }
+  .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+  .index-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .index-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px 12px; }
+  .index-card.wide { grid-column:1/-1; display:flex; gap:12px; }
+  .index-card .label { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.5px; }
+  .index-card .value { font-size:20px; font-weight:800; margin-top:4px; color:var(--white); }
+  .index-card .value.small { font-size:16px; }
+  .index-card .change { font-size:13px; font-weight:700; margin-top:3px; }
+  .up { color:var(--green); } .down { color:var(--red); } .flat { color:var(--yellow); }
+  .news-item { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:8px; }
+  .news-item .num { display:inline-block; width:22px; height:22px; border-radius:50%; background:var(--accent2); color:#fff; font-size:11px; font-weight:700; text-align:center; line-height:22px; margin-bottom:8px; }
+  .news-item .title { font-size:14px; font-weight:700; line-height:1.4; color:var(--white); }
+  .news-item .body { font-size:12px; color:var(--muted); margin-top:6px; line-height:1.6; }
+  .tbl-wrap { overflow-x:auto; border-radius:12px; border:1px solid var(--border); }
+  table { width:100%; border-collapse:collapse; font-size:11px; }
+  thead tr { background:var(--card2); }
+  thead th { padding:10px 8px; text-align:right; color:var(--muted); font-weight:600; font-size:10px; white-space:nowrap; }
+  thead th:first-child { text-align:left; }
+  tbody tr { border-top:1px solid var(--border); }
+  tbody tr:nth-child(even) { background:rgba(255,255,255,.02); }
+  tbody td { padding:10px 8px; text-align:right; white-space:nowrap; }
+  tbody td:first-child { text-align:left; font-weight:600; }
+  td a { color:var(--accent); text-decoration:none; }
+  .issue-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:8px; }
+  .ticker { display:inline-block; border:1px solid; font-size:11px; font-weight:800; padding:3px 10px; border-radius:6px; margin-bottom:8px; }
+  .tag-good { background:rgba(46,213,115,.15); border-color:rgba(46,213,115,.3); color:var(--green); }
+  .tag-bad { background:rgba(255,71,87,.15); border-color:rgba(255,71,87,.3); color:var(--red); }
+  .tag-neu { background:rgba(0,212,170,.15); border-color:rgba(0,212,170,.3); color:var(--accent); }
+  .issue-card .title { font-size:13px; font-weight:700; color:var(--white); margin-bottom:4px; }
+  .issue-card .body { font-size:12px; color:var(--muted); line-height:1.6; }
+  .impact-card { background:linear-gradient(135deg,#1a1a2e,#16213e); border:1px solid rgba(123,97,255,.25); border-radius:12px; padding:18px; }
+  .impact-card h3 { font-size:14px; font-weight:700; color:var(--accent2); margin-bottom:12px; }
+  .impact-item { font-size:12px; color:var(--text); line-height:1.7; margin-bottom:8px; padding-left:16px; position:relative; }
+  .impact-item::before { content:'&#9658;'; position:absolute; left:0; color:var(--accent); font-size:9px; top:3px; }
+  .summary-card { background:linear-gradient(135deg,#0d1f2d,#1a2a3a); border:1px solid var(--accent); border-radius:12px; padding:18px; text-align:center; }
+  .summary-card .emoji { font-size:28px; }
+  .summary-card p { font-size:14px; font-weight:700; color:var(--white); margin-top:10px; line-height:1.6; }
+  .footer { text-align:center; padding:20px 16px 10px; font-size:10px; color:var(--muted); line-height:1.7; }
+  .footer strong { color:var(--accent); }
+  .note { font-size:10px; color:var(--muted); margin-top:6px; padding:0 4px; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="flag">&#127482;&#127480;</div>
+  <h1>미국증시 마감 브리핑</h1>
+  <div class="date">2026년 6월 25일 (목) | KST 2026.06.26 06:30</div>
+  <div class="sub">미국 동부 기준 정규장 마감</div>
+  <div class="badge">&#128202; SNS 브리핑 카드</div>
+</div>
+
+<div class="section">
+  <div class="section-title">&#128200; 주요 지수</div>
+  <div class="index-grid">
+    <div class="index-card">
+      <div class="label">S&amp;P 500</div>
+      <div class="value">7,357</div>
+      <div class="change flat">&#9644; -0.01%</div>
+    </div>
+    <div class="index-card">
+      <div class="label">다우존스</div>
+      <div class="value small">51,921</div>
+      <div class="change up">&#9650; +0.14%</div>
+    </div>
+    <div class="index-card">
+      <div class="label">나스닥</div>
+      <div class="value small">25,359</div>
+      <div class="change down">&#9660; -0.46%</div>
+    </div>
+    <div class="index-card">
+      <div class="label">러셀2000</div>
+      <div class="value small">3,008</div>
+      <div class="change up">&#9650; +0.71%</div>
+    </div>
+    <div class="index-card wide">
+      <div style="flex:1">
+        <div class="label">VIX (공포지수)</div>
+        <div class="value small">16.40</div>
+        <div class="change up">&#9660; -11.06%</div>
+      </div>
+      <div style="flex:1;border-left:1px solid var(--border);padding-left:12px">
+        <div class="label">시장 분위기</div>
+        <div style="font-size:13px;font-weight:700;color:var(--yellow);margin-top:6px;">혼조 (애플 쇼크)</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">Mag7 약세 · 중소형·헬스케어 방어</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">&#128240; 밤사이 주요 뉴스</div>
+  <div class="news-item">
+    <div class="num">1</div>
+    <div class="title">애플·마이크로소프트 가격 인상 — 메모리 쇼트리지 직격</div>
+    <div class="body">DRAM 계약가격 QoQ +90~95% 급등 여파로 애플은 MacBook·iPad 가격을 인상하고 마이크로소프트는 Xbox 가격을 올렸다. 애플 -6.13%(시총 -$2,750억), MSFT -3.23%. 메모리 가격 상승이 소비 전자기기 전방 수요를 압박.</div>
+  </div>
+  <div class="news-item">
+    <div class="num">2</div>
+    <div class="title">마이크론(MU) +17% 어닝서프라이즈 — AI 수요 폭발</div>
+    <div class="body">마이크론 FY3Q 조정 EPS $25.11 (예상 $20.78), 매출도 어닝서프라이즈. AI 데이터센터용 HBM 수요 급증이 실적을 견인. 반도체 섹터에 구조적 DRAM 공급 부족 신호.</div>
+  </div>
+  <div class="news-item">
+    <div class="num">3</div>
+    <div class="title">PCE 물가 4.1% — 2023년 4월 이후 최고</div>
+    <div class="body">개인소비지출(PCE) 물가지수 연율 4.1%로 연준 목표(2%)의 두 배 이상. 시장은 추가 금리 인상 가능성을 재반영하기 시작. 성장주·채권에 장기적 부담.</div>
+  </div>
+  <div class="news-item">
+    <div class="num">4</div>
+    <div class="title">유가 4일 연속 하락 후 소폭 반등 — 미·이란 협상 진전</div>
+    <div class="body">미·이란 협상 진전으로 호르무즈 해협 재개방 기대가 커지며 유가가 WTI $70 아래로 하락한 후 기술적 반등(+2%). WTI ~$72, 브렌트 ~$74. 에너지 섹터 약세.</div>
+  </div>
+  <div class="news-item">
+    <div class="num">5</div>
+    <div class="title">금 $4,040 +1% 반등 — 안전자산 수요 재부각</div>
+    <div class="body">빅테크 급락과 PCE 인플레이션 우려가 맞물리며 금이 +1.02%로 반등. 은은 $58.91로 전일 급락 후 혼조. PCE 발표 이후 실물 안전자산 선호 귀환.</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">&#128188; 보유 종목 현황</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>종목</th><th>현재가($)</th><th>원화(&#8361;)</th><th>당일</th><th>1M</th><th>3M</th><th>6M</th><th>1Y</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://m.stock.naver.com/worldstock/stock/NEE.N/total" target="_blank">NEE</a></td>
+          <td>84.97</td><td>131,169</td><td class="down">-1.01%</td><td>-</td><td>-</td><td>-</td><td>-</td>
+        </tr>
+        <tr>
+          <td><a href="https://m.stock.naver.com/worldstock/stock/SDGR.O/total" target="_blank">SDGR</a></td>
+          <td>15.11*</td><td>23,321*</td><td class="flat">-*</td><td>-</td><td>-</td><td>-</td><td>-</td>
+        </tr>
+        <tr>
+          <td><a href="https://m.stock.naver.com/worldstock/stock/META.O/total" target="_blank">META</a></td>
+          <td>563.00</td><td>869,151</td><td class="down">-0.15%</td><td>-</td><td>-</td><td>-</td><td>-</td>
+        </tr>
+        <tr>
+          <td><a href="https://m.stock.naver.com/worldstock/stock/GOOGL.O/total" target="_blank">GOOGL</a></td>
+          <td>345.29</td><td>532,983</td><td class="down">-1.34%</td><td>-</td><td>-</td><td>-</td><td>-</td>
+        </tr>
+        <tr>
+          <td><a href="https://m.stock.naver.com/worldstock/stock/AMD.O/total" target="_blank">AMD</a></td>
+          <td>531.48*</td><td>820,202*</td><td class="flat">-*</td><td>-</td><td>-</td><td>-</td><td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">* 추정값 | USD/KRW: 1,543.43 | 1M·3M·6M·1Y 데이터 미확보</div>
+</div>
+
+<div class="section">
+  <div class="section-title">&#128269; 보유 종목 이슈</div>
+  <div class="issue-card">
+    <div class="ticker tag-good">NEE +</div>
+    <div class="title">NEE — 도미니언 에너지 $670억 인수 진행 중</div>
+    <div class="body">NEE의 도미니언 에너지 $670억 전량 주식 인수 발표(5월) 후 절차 진행 중. 합병 시 세계 최대 규모 전력 유틸리티 탄생. AI 데이터센터 전력 수요 급증이 장기 성장 핵심 동력. 단기 금리 인상 우려에 -1.01% 하락.</div>
+  </div>
+  <div class="issue-card">
+    <div class="ticker tag-bad">SDGR -</div>
+    <div class="title">SDGR ~$15 — 바이오AI 플랫폼, 수익화 속도 관건</div>
+    <div class="body">슈뢰딩거는 AI 기반 신약 탐색 플랫폼. 목표주가 $20.25(+34% 상승여력). 단기 모멘텀 부재 상태. 파이프라인 임상 결과 또는 파트너십 발표가 다음 촉매.</div>
+  </div>
+  <div class="issue-card">
+    <div class="ticker tag-neu">META -</div>
+    <div class="title">META $563 — Mag7 중 상대적 방어 (당일 -0.15%)</div>
+    <div class="body">애플·마이크로소프트 급락 속 META는 -0.15%로 선방. 메타는 DRAM 가격 인상 직접 영향권 밖. AI 광고 플랫폼 수익성 견조 기대. 단, PCE 인플레이션이 광고비 지출 압박 요인.</div>
+  </div>
+  <div class="issue-card">
+    <div class="ticker tag-bad">GOOGL -</div>
+    <div class="title">GOOGL $345 (-1.34%) — 빅테크 약세에 동반 하락</div>
+    <div class="body">알파벳은 AI 검색·클라우드 강점에도 Mag7 전반 약세에 -1.34%. PCE 인플레이션과 금리 불확실성이 고밸류에이션 기술주 전반에 부담. 장기 AI 수익화 스토리는 유효.</div>
+  </div>
+  <div class="issue-card">
+    <div class="ticker tag-good">AMD +</div>
+    <div class="title">AMD ~$531 — 마이크론 실적 호재로 AI 반도체 수혜 기대</div>
+    <div class="body">마이크론 +17% 어닝서프라이즈로 AI 반도체 수요 구조적 확인. AMD는 HBM·데이터센터 GPU 수혜 가능성. 단, 빅테크 하드웨어 가격 인상 역풍과 AI ROK 논란이 단기 리스크.</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">&#128640; 매그니피센트7 + SpaceX</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>종목</th><th>현재가($)</th><th>당일 등락</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="https://m.stock.naver.com/worldstock/stock/AAPL.O/total" target="_blank">AAPL</a></td><td>275.30</td><td class="down">-6.13%</td><td style="color:var(--muted);font-size:10px;">MacBook·iPad 가격인상</td></tr>
+        <tr><td><a href="https://m.stock.naver.com/worldstock/stock/MSFT.O/total" target="_blank">MSFT</a></td><td>~383*</td><td class="down">-3.23%</td><td style="color:var(--muted);font-size:10px;">Xbox 가격인상</td></tr>
+        <tr><td><a href="https://m.stock.naver.com/worldstock/stock/NVDA.O/total" target="_blank">NVDA</a></td><td>~198*</td><td class="down">-1.41%</td><td style="color:var(--muted);font-size:10px;">AI 투자 불안 잔존</td></tr>
+        <tr><td><a href="https://m.stock.naver.com/worldstock/stock/META.O/total" target="_blank">META</a></td><td>563.00</td><td class="down">-0.15%</td><td style="color:var(--muted);font-size:10px;">상대적 방어</td></tr>
+        <tr><td><a href="https://m.stock.naver.com/worldstock/stock/GOOGL.O/total" target="_blank">GOOGL</a></td><td>345.29</td><td class="down">-1.34%</td><td style="color:var(--muted);font-size:10px;">빅테크 동반 약세</td></tr>
+        <tr><td><a href="https://m.stock.naver.com/worldstock/stock/AMZN.O/total" target="_blank">AMZN</a></td><td>~227*</td><td class="down">-2.34%</td><td style="color:var(--muted);font-size:10px;">클라우드·리테일 약세</td></tr>
+        <tr><td><a href="https://m.stock.naver.com/worldstock/stock/TSLA.O/total" target="_blank">TSLA</a></td><td>-</td><td class="flat">-0.04%</td><td style="color:var(--muted);font-size:10px;">거의 보합</td></tr>
+        <tr><td><a href="https://m.stock.naver.com/worldstock/stock/SPCX.O/total" target="_blank">SPCX</a></td><td>-</td><td style="color:var(--muted);">비상장</td><td style="color:var(--muted);font-size:10px;">공개 시세 미확보</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">* 추정값 포함 | SPCX는 공개 거래소 미상장 ETF 추정치</div>
+</div>
+
+<div class="section">
+  <div class="section-title">&#128198; 원자재 · 금리 · 환율</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>항목</th><th>가격/수익률</th><th>등락</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>금(Gold)</td><td>$4,040/oz</td><td class="up">+1.02%</td></tr>
+        <tr><td>은(Silver)</td><td>$58.91/oz</td><td class="down">-약5%*</td></tr>
+        <tr><td>구리(Copper)</td><td>$6.02/lb</td><td class="up">+1.22%</td></tr>
+        <tr><td>알루미늄</td><td>~$3,134/t*</td><td style="color:var(--muted)">추정</td></tr>
+        <tr><td>천연가스</td><td>$3.20/MMBtu</td><td class="down">약세</td></tr>
+        <tr><td>WTI 원유</td><td>~$72/bbl</td><td class="up">+2%*</td></tr>
+        <tr><td>브렌트유</td><td>~$74/bbl</td><td class="up">+2%*</td></tr>
+        <tr><td>미 2년물</td><td>4.16%</td><td class="flat">보합</td></tr>
+        <tr><td>미 10년물</td><td>4.50%</td><td class="flat">보합</td></tr>
+        <tr><td>미 30년물</td><td>4.94%</td><td class="flat">보합</td></tr>
+        <tr><td>USD/KRW</td><td>1,543.43</td><td class="up">+0.07%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">* 추정 또는 당일 변동폭 기준 | WTI·브렌트 4일 연속 하락 후 기술적 반등</div>
+</div>
+
+<div class="section">
+  <div class="section-title">&#127472;&#127479; 한국 증시 영향 분석</div>
+  <div class="impact-card">
+    <h3>오늘 국내 시장 주목 포인트</h3>
+    <div class="impact-item"><strong>반도체 강세 기대 — 삼성·SK하이닉스 수혜:</strong> 마이크론 +17% 어닝서프라이즈로 HBM·DRAM 공급 부족 구조적 확인. 삼성전자·SK하이닉스 동반 상승 기대. 단, 수요 기업(애플·마이크로소프트) 하드웨어 가격 인상에 따른 소비 위축 우려도 공존.</div>
+    <div class="impact-item"><strong>PCE 인플레이션 → 외국인 관망:</strong> PCE 4.1%로 연준 추가 긴축 가능성 재부상. 원화 1,543원 수준에서 외국인 자금 이탈 경계. 코스피 고PER 성장주·바이오 단기 조정 가능성.</div>
+    <div class="impact-item"><strong>빅테크 급락 → IT 수출 간접 영향:</strong> 애플·마이크로소프트 가격 인상이 소비 전자 수요 감소로 이어질 경우 삼성전자 스마트폰·PC 부문에 간접 영향. 단기적으로는 반도체 메모리 가격 상승이 더 큰 호재.</div>
+    <div class="impact-item"><strong>유가 반등 → 정유·항공 혼조:</strong> WTI ~$72 소폭 반등으로 SK이노베이션·GS칼텍스 마진 소폭 개선. 항공주(대한항공·아시아나)는 4일 급락 이후 유가 수준에서 비용 부담 완화.</div>
+    <div class="impact-item"><strong>금 반등 → 귀금속 ETF 회복:</strong> 금 +1.02% 반등으로 국내 금 ETF·금 관련주 소폭 반등 기대. PCE 인플레이션이 실물 안전자산 수요 지지.</div>
+    <div class="impact-item"><strong>종합 시나리오:</strong> 반도체(삼성·SK하닉스) 선방, 빅테크 연동 IT 하드웨어·소비재 주의, PCE 발표 충격 흡수 여부가 금일 코스피 방향 결정.</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">&#9997; 오늘의 한 줄 요약</div>
+  <div class="summary-card">
+    <div class="emoji">&#128248;</div>
+    <p>애플·마이크로소프트 가격 인상 쇼크에 Mag7 동반 하락,<br>마이크론 +17% 어닝서프라이즈가 반도체 구조적 강세 신호.<br><span style="color:var(--accent);">PCE 4.1% 발표 — 인플레 재점화 경계.</span></p>
+  </div>
+</div>
+
+<div class="footer">
+  <strong>투자 유의사항</strong><br>
+  본 브리핑은 정보 제공 목적으로만 작성되었으며 투자 권유가 아닙니다.<br>
+  투자 판단 및 책임은 투자자 본인에게 있습니다.<br>
+  * 표시 수치는 추정값 | 기준: 미국 동부 2026.06.25 장마감
+</div>
+
+</body>
+</html>
