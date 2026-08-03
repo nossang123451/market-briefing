@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미국증시 마감 브리핑 2026-08-04(화)</title>
+<style>
+  :root{
+    --bg:#0b0e14; --card:#121722; --card2:#161c29; --border:#232b3a;
+    --text:#eef1f6; --sub:#9aa5b8; --up:#ff5c5c; --down:#4a9dff; --flat:#c9cfda;
+    --accent:#f4c542; --accent2:#7c8cff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:linear-gradient(180deg,#0b0e14,#0a0c11 60%); color:var(--text);
+    font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',-apple-system,BlinkMacSystemFont,sans-serif;
+    display:flex; flex-direction:column; align-items:center; gap:18px; padding:24px 0 60px;
+  }
+  .card{
+    width:390px; max-width:92vw; background:var(--card); border:1px solid var(--border);
+    border-radius:22px; padding:26px 22px; position:relative; overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  .card::before{
+    content:""; position:absolute; top:-60px; right:-60px; width:180px; height:180px;
+    background:radial-gradient(circle, rgba(124,140,255,.25), transparent 70%); border-radius:50%;
+  }
+  .tag{display:inline-block; font-size:12px; color:var(--accent); background:rgba(244,197,66,.1);
+    border:1px solid rgba(244,197,66,.35); padding:3px 10px; border-radius:20px; font-weight:600; margin-bottom:10px;}
+  h1{font-size:22px; margin:6px 0 4px; line-height:1.35;}
+  h2{font-size:17px; margin:0 0 14px; color:var(--sub); font-weight:500;}
+  .sub{color:var(--sub); font-size:13px; margin-top:2px;}
+  .divider{height:1px; background:var(--border); margin:14px 0;}
+  .row{display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--border);}
+  .row:last-child{border-bottom:none;}
+  .name{font-size:14.5px; font-weight:600;}
+  .val{font-size:14.5px; font-weight:700; text-align:right;}
+  .chg-up{color:var(--up);} .chg-down{color:var(--down);} .chg-flat{color:var(--flat);}
+  .small{font-size:11.5px; color:var(--sub);}
+  table{width:100%; border-collapse:collapse; font-size:12.3px;}
+  th{color:var(--sub); font-weight:600; text-align:right; padding:6px 4px; border-bottom:1px solid var(--border); white-space:nowrap;}
+  th:first-child, td:first-child{text-align:left;}
+  td{padding:8px 4px; border-bottom:1px solid var(--border); text-align:right; white-space:nowrap;}
+  a.tick{color:var(--accent2); text-decoration:none; font-weight:700;}
+  .krw{display:block; font-size:10.5px; color:var(--sub); font-weight:400;}
+  .news-item{margin-bottom:14px; padding-left:14px; border-left:3px solid var(--accent2);}
+  .news-item b{font-size:14.5px;}
+  .news-item p{margin:5px 0 0; font-size:13px; color:var(--sub); line-height:1.55;}
+  .issue{margin-bottom:12px;}
+  .issue .t{font-size:14px; font-weight:700;}
+  .issue .d{font-size:12.8px; color:var(--sub); margin-top:3px; line-height:1.5;}
+  .pill{display:inline-block; font-size:11px; padding:1px 8px; border-radius:12px; font-weight:700; margin-right:6px;}
+  .pill-good{background:rgba(255,92,92,.12); color:var(--up); border:1px solid rgba(255,92,92,.3);}
+  .pill-bad{background:rgba(74,157,255,.12); color:var(--down); border:1px solid rgba(74,157,255,.3);}
+  .foot{font-size:11px; color:#5c6577; text-align:center; margin-top:14px; line-height:1.6;}
+  .num{font-size:34px; font-weight:800; margin:2px 0;}
+  .idxgrid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px;}
+  .idxbox{background:var(--card2); border:1px solid var(--border); border-radius:14px; padding:14px;}
+  .idxbox .l{font-size:12px; color:var(--sub); font-weight:600;}
+  .idxbox .p{font-size:19px; font-weight:800; margin-top:4px;}
+  .idxbox .c{font-size:12.5px; font-weight:700; margin-top:2px;}
+  .summary-box{background:linear-gradient(135deg, rgba(124,140,255,.14), rgba(244,197,66,.08));
+    border:1px solid rgba(124,140,255,.3); border-radius:16px; padding:18px; margin-top:6px;}
+  .summary-box p{font-size:15px; line-height:1.7; margin:0; font-weight:600;}
+  .badge-num{position:absolute; top:20px; right:22px; font-size:11px; color:var(--sub); font-weight:600;}
+</style>
+</head>
+<body>
+
+<!-- 1. 커버 -->
+<div class="card" style="text-align:center; padding-top:40px;">
+  <span class="badge-num">1 / 9</span>
+  <span class="tag">미국증시 마감 브리핑</span>
+  <h1 style="font-size:26px;">2026년 8월 3일(월) 마감 기준<br>화요일 브리핑</h1>
+  <p class="sub">발행 · 2026-08-04(화) 06:30 KST&nbsp;·&nbsp;다음 정규장 개장 8/4(화) 22:30 KST</p>
+  <div class="divider"></div>
+  <p class="sub" style="font-size:12.5px; line-height:1.7;">
+  트럼프, 이란 "대규모 공습" 철회·협상 재개 선언 — WTI -5.97%·브렌트 -4.68% 급락, 3대 지수 랠리 견인<br>
+  아마존 $3조 시총 클럽 가입(+4.90%) — AWS AI 수요 서프라이즈 지속, 5번째 $3조 기업 등극<br>
+  마이크로소프트 사상 최대 단일일 시총 증가(+4,500억달러, +4.95%) — 골드만삭스 컨빅션 리스트 편입<br>
+  메타 +7.14%·알파벳 +5.32% 동반 급등 — 모건스탠리 AI 인프라 투자 안심 코멘트에 반등 랠리<br>
+  애플 나홀로 약세(-1.78%), 4거래일 연속 하락 — 실적 후 매도세 지속, KeyBanc 등 하향 의견<br><br>
+  지수 · 밤사이 뉴스 · 보유종목 5선 · 빅테크 · 원자재/금리/환율 · 한국증시 영향까지 한 번에<br><br>
+  ※ 다우 +1.32%·S&amp;P500 +1.48%·나스닥 +2.13%, 3대 지수 동반 급등 마감<br>
+  ※ VIX 15.79(-1.25%)로 안정권 유지, 러셀2000은 +1.51%로 동반 상승
+  </p>
+</div>
+
+<!-- 2. 3대 지수 -->
+<div class="card">
+  <span class="badge-num">2 / 9</span>
+  <span class="tag">지수 현황</span>
+  <h1>3대 지수 · 러셀2000 · VIX</h1>
+  <h2 style="font-size:12px;">2026.08.03(월) 정규장 종가 · 다음 개장 8/4(화) 22:30 KST</h2>
+  <div class="idxgrid">
+    <div class="idxbox">
+      <div class="l">다우존스</div>
+      <div class="p">53,178.41</div>
+      <div class="c chg-up">▲ +1.32%</div>
+    </div>
+    <div class="idxbox">
+      <div class="l">S&amp;P 500</div>
+      <div class="p">7,600.50</div>
+      <div class="c chg-up">▲ +1.48%</div>
+    </div>
+    <div class="idxbox">
+      <div class="l">나스닥종합</div>
+      <div class="p">25,913.90</div>
+      <div class="c chg-up">▲ +2.13%</div>
+    </div>
+    <div class="idxbox">
+      <div class="l">러셀2000</div>
+      <div class="p">2,975.71</div>
+      <div class="c chg-up">▲ +1.51%</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="name">VIX (변동성지수)</div>
+    <div class="val chg-down">15.79<span class="small">-1.25%, 안정권 유지</span></div>
+  </div>
+  <p class="foot" style="text-align:left; margin-top:12px;">트럼프 대통령이 이란에 대한 "대규모" 공습 계획을 철회하고 협상 재개를 선언하면서 유가가 급락, 위험자산 선호 심리가 살아나며 3대 지수가 동반 급등했다. 다우는 693p(+1.32%) 오르며 사상 최고가를 경신했고, 나스닥은 아마존·마이크로소프트·메타·알파벳 등 빅테크 실적 랠리에 힘입어 +2.13% 급등했다. 애플만 나홀로 약세를 지속하며 빅테크 내 실적 디커플링이 이어지는 모습이다.</p>
+</div>
+
+<!-- 3. 주요 뉴스 -->
+<div class="card">
+  <span class="badge-num">3 / 9</span>
+  <span class="tag">밤사이 주요 뉴스</span>
+  <h1>주가 영향 핵심 이슈</h1>
+  <div class="news-item">
+    <b>① 트럼프, 이란 공습 철회·협상 재개 — 유가 급락, 위험선호 회복</b>
+    <p>트럼프 대통령이 이란에 대해 계획했던 "대규모" 공습을 철회하고 월요일부터 새로운 협상을 시작한다고 밝히면서 지정학적 리스크가 완화됐다. 이에 WTI가 -5.97%(배럴당 $79.62), 브렌트유가 -4.68%($83.82)로 급락했다. 오일 하락과 함께 위험자산 선호 심리가 살아나며 3대 지수 동반 급등을 견인했다.</p>
+  </div>
+  <div class="news-item">
+    <b>② 아마존 $3조 시총 클럽 가입 — AWS AI 수요 서프라이즈 지속</b>
+    <p>아마존이 시가총액 $3조를 돌파하며 역대 5번째로 이 클럽에 이름을 올렸다. 지난주 발표한 2분기 실적에서 조정 EPS $1.97(예상 $1.82 상회), 매출 $2,006억(예상 $1,965억 상회)을 기록한 데 이어, AWS의 AI 수요 가속화 소식이 재확인되며 주가가 +4.90%($284.90) 추가 상승했다.</p>
+  </div>
+  <div class="news-item">
+    <b>③ 마이크로소프트 사상 최대 단일일 시총 증가 — 골드만삭스 컨빅션 리스트 편입</b>
+    <p>마이크로소프트는 하루 만에 약 $4,500억의 시가총액을 늘리며 미국 상장기업 역사상 최대 단일일 증가 기록을 세웠다. 골드만삭스는 마이크로소프트를 US Conviction List에 추가하며 강세론에 힘을 실었다. 주가는 +4.95%($487.72)로 마감했다.</p>
+  </div>
+  <div class="news-item">
+    <b>④ 메타·알파벳 동반 급등 — 모건스탠리 "AI 인프라 투자 우려 과도"</b>
+    <p>모건스탠리 애널리스트들이 AI 인프라 투자 확대에 대한 시장 우려가 과도하다고 진단하며 투자자들을 안심시키자, 메타가 +7.14%($596.45), 알파벳이 +5.32%($375.08) 급등했다. 캐시 우드는 메타의 실적 후 매도세 속에 $1,430만 규모를 추가 매수한 것으로 알려졌다.</p>
+  </div>
+  <div class="news-item">
+    <b>⑤ 애플 나홀로 약세, 4거래일 연속 하락 — 실적 후 매도세 지속</b>
+    <p>애플은 지난 금요일 4분기 가이던스 실망(-7.35%)에 이어 이날도 -1.78%($303.42) 추가 하락하며 4거래일 누적 -10% 이상 하락을 기록했다. KeyBanc는 "Run for the Hills"라는 제목의 리포트로, 필립증권은 투자의견을 Neutral에서 Reduce로 하향하며 약세 심리가 이어지고 있다.</p>
+  </div>
+</div>
+
+<!-- 4. 보유종목 테이블 -->
+<div class="card">
+  <span class="badge-num">4 / 9</span>
+  <span class="tag">내 보유종목</span>
+  <h1>NEE · SDGR · META · GOOGL · AMD</h1>
+  <h2 style="font-size:12px;">현재가(원화환산, ₩1,429.8/$) · 당일등락 · 기간별 등락률</h2>
+  <table>
+    <tr><th>종목</th><th>현재가</th><th>당일</th><th>1M</th><th>3M</th><th>6M</th><th>12M</th></tr>
+    <tr>
+      <td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/NEE.N/total" target="_blank">NEE</a></td>
+      <td>$86.19<span class="krw">≈₩123,235</span></td>
+      <td class="chg-down">-0.84%</td>
+      <td class="chg-down">-2.4%</td><td class="chg-down">-3.8%*</td><td class="chg-up">+8.1%*</td>
+      <td class="chg-up">+43.2%*</td>
+    </tr>
+    <tr>
+      <td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/SDGR.O/total" target="_blank">SDGR</a></td>
+      <td>$15.25*<span class="krw">≈₩21,804</span></td>
+      <td class="chg-up">+0.7%*</td>
+      <td class="chg-down">-1.3%*</td><td class="chg-up">+10.8%*</td><td class="chg-down">-14.4%*</td>
+      <td class="chg-down">-26.4%*</td>
+    </tr>
+    <tr>
+      <td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/META.O/total" target="_blank">META</a></td>
+      <td>$596.45<span class="krw">≈₩852,804</span></td>
+      <td class="chg-up">+7.14%</td>
+      <td class="chg-up">+2.3%</td><td class="chg-up">+12.5%*</td>
+      <td class="chg-down">-3.6%*</td><td class="chg-down">-14.2%*</td>
+    </tr>
+    <tr>
+      <td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/GOOGL.O/total" target="_blank">GOOGL</a></td>
+      <td>$375.08<span class="krw">≈₩536,289</span></td>
+      <td class="chg-up">+5.32%</td>
+      <td class="chg-up">+4.2%</td><td class="chg-up">+31.7%*</td><td class="chg-up">+52.7%*</td><td class="chg-up">+90.8%*</td>
+    </tr>
+    <tr>
+      <td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/AMD.O/total" target="_blank">AMD</a></td>
+      <td>$484.64<span class="krw">≈₩692,938</span></td>
+      <td class="chg-up">+1.78%</td>
+      <td class="chg-down">-6.4%</td><td class="chg-up">+62.9%*</td>
+      <td class="chg-up">+103.6%*</td>
+      <td class="chg-up">+199.0%*</td>
+    </tr>
+  </table>
+  <p class="foot" style="text-align:left;">종목명 클릭 시 네이버증권 해외주식 페이지로 이동. 환율 1,429.8원/달러(8/3 종가) 적용. *표시는 데이터 확인 제한으로 추정치 — 당일가는 공식 종가 기준 확인, 1개월 등락률은 7/2 종가 대비 확인치이며 3M/6M/12M은 직전 확인치(7/31 기준) 대비 8/3 종가 변동률을 반영한 근사치.</p>
+</div>
+
+<!-- 5. 보유종목 이슈 -->
+<div class="card">
+  <span class="badge-num">5 / 9</span>
+  <span class="tag">보유종목 이슈</span>
+  <h1>종목별 최신 호재·악재</h1>
+  <div class="issue">
+    <div class="t">NEE</div>
+    <div class="d">-0.84%로 소폭 조정, 최근 상승분에 대한 차익실현 흐름 속 안정적 흐름을 유지하고 있다. 도미니언에너지와의 합병 절차는 관련 규제당국 승인 신청이 순조롭게 진행 중이며, 브룩필드와 함께 켄터키주에 $1,000억 규모 AI 데이터센터 캠퍼스 개발 계획도 이어가고 있다. BMO캐피탈은 목표주가를 $94에서 $96으로 상향 조정했다.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-bad">주시</span>SDGR</div>
+    <div class="d">8월 5일(수) 장마감 후 2분기 실적 발표를 앞두고 있다. 컨센서스는 신약개발 부문 매출 가이던스($5,500만~$6,500만) 달성 여부에 주목하고 있으며, 최근 발표한 AI 코파일럿 'Bunsen' 정식 출시가 향후 라이선스 매출 확대에 기여할지가 관전 포인트다. 애널리스트 컨센서스는 "매수" 유지, 목표주가 $20.57.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-good">호재</span>META</div>
+    <div class="d">+7.14% 급등, $596.45 마감. 모건스탠리가 AI 인프라 투자 확대에 대한 시장 우려가 과도하다고 진단하며 투자심리가 크게 개선됐다. 캐시 우드(아크인베스트)는 실적 후 매도세 국면에서 $1,430만 규모를 추가 매수했다고 알려졌으며, 반면 로스캐피탈은 목표주가를 $820에서 $750으로 하향 조정하는 등 밸류에이션에 대한 의견은 여전히 엇갈린다.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-good">호재</span>GOOGL</div>
+    <div class="d">+5.32% 급등, $375.08 마감. 구글 딥마인드가 "AI의 다음 단계가 이미 시작되고 있다"는 코멘트를 내놓으며 투자자들의 기대감을 자극했고, 모건스탠리의 AI 인프라 투자 안심 코멘트도 동반 상승을 뒷받침했다. 앞서 논란이 됐던 Earth AI 위성 이미지 기능은 출시 하루 만에 철회했다.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-bad">주시</span>AMD</div>
+    <div class="d">+1.78%로 실적 발표를 하루 앞두고 상승 마감했다. 8월 4일(화) 장마감 후 2분기 실적 발표 예정 — 컨센서스 EPS $1.34(전년比 +396%), 매출 $113.2억(+47.3%YoY)로 시장 기대치가 높다. 번스타인은 AI 서버향 매출 전망을 상향했으나, FX엠파이어는 AI 수익성에 대한 우려가 반도체株 전반의 상승폭을 제한하고 있다고 진단했다.</div>
+  </div>
+</div>
+
+<!-- 6. 빅테크 + 스페이스X -->
+<div class="card">
+  <span class="badge-num">6 / 9</span>
+  <span class="tag">빅테크 & 스페이스X</span>
+  <h1>매그니피센트7 + SPCX</h1>
+  <h2 style="font-size:12px;">2026.08.03(월) 종가 기준</h2>
+  <table>
+    <tr><th>종목</th><th>현재가</th><th>당일등락</th></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/AAPL.O/total" target="_blank">AAPL</a></td><td>$303.42</td><td class="chg-down">-1.78%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/MSFT.O/total" target="_blank">MSFT</a></td><td>$487.72</td><td class="chg-up">+4.95%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/GOOGL.O/total" target="_blank">GOOGL</a></td><td>$375.08</td><td class="chg-up">+5.32%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/AMZN.O/total" target="_blank">AMZN</a></td><td>$284.90</td><td class="chg-up">+4.90%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/META.O/total" target="_blank">META</a></td><td>$596.45</td><td class="chg-up">+7.14%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/NVDA.O/total" target="_blank">NVDA</a></td><td>$206.64</td><td class="chg-up">+2.93%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/TSLA.O/total" target="_blank">TSLA</a></td><td>$322.08</td><td class="chg-up">+3.49%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/SPCX.O/total" target="_blank">SPCX (스페이스X)</a></td><td>$114.65</td><td class="chg-up">+5.79%</td></tr>
+  </table>
+  <p class="foot" style="text-align:left;">이란 리스크 완화와 유가 급락에 힘입어 매그니피센트7 중 애플을 제외한 전 종목이 동반 상승, 메타·알파벳·마이크로소프트가 강세를 주도했다. SPCX는 8월 4일 첫 공개 실적 발표를 앞두고 락업 해제 이슈까지 겹쳐 변동성이 커진 가운데서도 +5.79% 상승했다.</p>
+</div>
+
+<!-- 7. 원자재/금리/환율 -->
+<div class="card">
+  <span class="badge-num">7 / 9</span>
+  <span class="tag">원자재 · 금리 · 환율</span>
+  <h1>커머디티 & 채권 & FX</h1>
+  <table>
+    <tr><th>구분</th><th>현재가</th><th>비고</th></tr>
+    <tr><td>금 (Gold)</td><td>$4,038.16</td><td class="small chg-down">-0.12%</td></tr>
+    <tr><td>은 (Silver)</td><td>$58.26</td><td class="small chg-up">+1.10%</td></tr>
+    <tr><td>구리 (Copper)</td><td>$6.52/lb</td><td class="small chg-up">+1.26%</td></tr>
+    <tr><td>알루미늄</td><td>$3,194.65/t*</td><td class="small">보합권 추정</td></tr>
+    <tr><td>천연가스</td><td>$2.763/MMBtu</td><td class="small chg-up">+0.58%</td></tr>
+    <tr><td>WTI 유가</td><td>$79.62</td><td class="small chg-down">-5.97%, 이란 리스크 완화</td></tr>
+    <tr><td>브렌트유</td><td>$83.82</td><td class="small chg-down">-4.68%</td></tr>
+    <tr><td>美 2년물</td><td>4.28%*</td><td class="small">보합권 추정</td></tr>
+    <tr><td>美 10년물</td><td>4.69%</td><td class="small">소폭 하락</td></tr>
+    <tr><td>美 30년물</td><td>5.22%</td><td class="small">전주 22년來 고점서 소폭 반락</td></tr>
+    <tr><td>USD/KRW</td><td>1,429.8원</td><td class="small chg-up">+5.8원</td></tr>
+  </table>
+  <p class="foot" style="text-align:left;">트럼프의 이란 공습 철회·협상 재개 선언으로 지정학적 리스크가 완화되며 WTI·브렌트유가 동반 5%대 급락했다. 국채금리는 지난주 22년來 고점(30년물 5.275%)에서 소폭 반락한 모습이며, 금·은은 위험선호 심리 회복 속에서도 견조한 흐름을 유지했다. 원/달러 환율은 1,429.8원으로 소폭 상승 마감했다.</p>
+</div>
+
+<!-- 8. 한국증시 영향 분석 -->
+<div class="card">
+  <span class="badge-num">8 / 9</span>
+  <span class="tag">한국증시 영향 분석</span>
+  <h1>美 증시 흐름이 코스피/코스닥에 미칠 영향</h1>
+  <div class="issue">
+    <div class="t"><span class="pill pill-bad">주시</span>코스피, 8/3 이미 -5.12% 급락 — 7/31 급등분(+17.91%) 되돌림 진행 중</div>
+    <div class="d">전일(8/3) 코스피는 7월 31일 사상 최대 폭등(+17.91%)에 대한 차익실현 매물이 쏟아지며 -5.12%(6,257.45) 급락했다. 화요일(8/4) 개장은 간밤 美 증시의 강한 반등(다우 +1.32%·나스닥 +2.13%)을 반영해 반등 시도가 예상되나, 단기 변동성 국면이 이어질 가능성에 유의할 필요가 있다.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-good">호재</span>아마존·MS 시총 신기록 — AI 인프라 투자 정당화 랠리, 국내 반도체·클라우드 관련주에 훈풍</div>
+    <div class="d">아마존의 $3조 시총 클럽 가입과 마이크로소프트의 사상 최대 단일일 시총 증가는 "AI 투자가 실제 매출로 이어진다"는 신뢰를 다시 한번 확인시켰다. 이는 SK하이닉스·삼성전자 등 AI 메모리·반도체 밸류체인 및 국내 클라우드 관련주에 긍정적 재료로 작용할 수 있다.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-good">호재</span>국제유가 급락(WTI -5.97%) — 국내 항공·해운·화학 업종 원가 부담 완화</div>
+    <div class="d">트럼프의 이란 공습 철회·협상 재개 소식으로 유가가 급락하며 원자재 수입 의존도가 높은 국내 항공, 해운, 정유·화학 업종의 원가 부담이 완화될 전망이다. 다만 지정학적 리스크는 협상 결과에 따라 재차 변동성을 키울 수 있어 지속적인 모니터링이 필요하다.</div>
+  </div>
+  <div class="issue">
+    <div class="t">원화 소폭 약세(1,429.8원, +5.8원) — 외국인 수급 변화 주시</div>
+    <div class="d">코스피 급락과 함께 원/달러 환율이 소폭 상승(원화 약세)했다. 전일 급락에 따른 외국인 순매도 전환 여부와, 간밤 美 증시 랠리가 화요일 국내 증시 수급에 어떤 영향을 미칠지가 관전 포인트다.</div>
+  </div>
+  <p class="foot" style="text-align:left; margin-top:4px;">종합적으로 간밤 美 증시의 강한 반등(이란 리스크 완화·빅테크 실적 랠리)은 화요일 코스피 반등 시도에 우호적 배경이 될 전망이나, 전일 이미 -5.12% 급락한 만큼 7/31 급등분 되돌림 과정에서의 변동성 확대 가능성에 유의해야 한다. 애플의 지속적 약세와 원/달러 환율 흐름도 함께 주시할 필요가 있다.</p>
+</div>
+
+<!-- 9. 한줄 요약 -->
+<div class="card" style="text-align:center;">
+  <span class="badge-num">9 / 9</span>
+  <span class="tag">오늘의 한 줄 요약</span>
+  <h1 style="margin-bottom:16px;">Summary</h1>
+  <div class="summary-box">
+    <p>트럼프의 이란 공습 철회·협상 재개 선언에 유가 급락(WTI -5.97%)하며 3대 지수 동반 급등(다우 +1.32%·S&amp;P +1.48%·나스닥 +2.13%) — 아마존 $3조 시총 클럽 가입(+4.90%), MS 사상 최대 단일일 시총 증가(+4.95%), 메타·알파벳도 모건스탠리의 AI 인프라 안심 코멘트에 동반 급등(+7.14%·+5.32%) — 애플만 나홀로 4거래일 연속 약세(-1.78%) — 국내 증시는 전일 코스피 -5.12% 급락(7/31 급등분 되돌림)을 소화하며 화요일 반등 시도가 예상되나 변동성 유의 필요</p>
+  </div>
+  <p class="foot" style="margin-top:18px;">
+  본 브리핑은 공개 보도·시세 정보를 바탕으로 자동 정리한 자료이며 투자 권유가 아닙니다.<br>
+  일부 수치는 확인 제한으로 추정치가 포함되어 있습니다.<br><br>
+  미국증시 브리핑 · 2026-08-04 06:30 KST 발행 (8/3 월 마감 데이터 · 다음 정규장 8/4 화 22:30 KST 개장)
+  </p>
+</div>
+
+</body>
+</html>
