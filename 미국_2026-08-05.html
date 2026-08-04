@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미국증시 마감 브리핑 2026-08-05(수)</title>
+<style>
+  :root{
+    --bg:#0b0e14; --card:#121722; --card2:#161c29; --border:#232b3a;
+    --text:#eef1f6; --sub:#9aa5b8; --up:#ff5c5c; --down:#4a9dff; --flat:#c9cfda;
+    --accent:#f4c542; --accent2:#7c8cff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:linear-gradient(180deg,#0b0e14,#0a0c11 60%); color:var(--text);
+    font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',-apple-system,BlinkMacSystemFont,sans-serif;
+    display:flex; flex-direction:column; align-items:center; gap:18px; padding:24px 0 60px;
+  }
+  .card{
+    width:390px; max-width:92vw; background:var(--card); border:1px solid var(--border);
+    border-radius:22px; padding:26px 22px; position:relative; overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  .card::before{
+    content:""; position:absolute; top:-60px; right:-60px; width:180px; height:180px;
+    background:radial-gradient(circle, rgba(124,140,255,.25), transparent 70%); border-radius:50%;
+  }
+  .tag{display:inline-block; font-size:12px; color:var(--accent); background:rgba(244,197,66,.1);
+    border:1px solid rgba(244,197,66,.35); padding:3px 10px; border-radius:20px; font-weight:600; margin-bottom:10px;}
+  h1{font-size:22px; margin:6px 0 4px; line-height:1.35;}
+  h2{font-size:17px; margin:0 0 14px; color:var(--sub); font-weight:500;}
+  .sub{color:var(--sub); font-size:13px; margin-top:2px;}
+  .divider{height:1px; background:var(--border); margin:14px 0;}
+  .row{display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--border);}
+  .row:last-child{border-bottom:none;}
+  .name{font-size:14.5px; font-weight:600;}
+  .val{font-size:14.5px; font-weight:700; text-align:right;}
+  .chg-up{color:var(--up);} .chg-down{color:var(--down);} .chg-flat{color:var(--flat);}
+  .small{font-size:11.5px; color:var(--sub);}
+  table{width:100%; border-collapse:collapse; font-size:12.3px;}
+  th{color:var(--sub); font-weight:600; text-align:right; padding:6px 4px; border-bottom:1px solid var(--border); white-space:nowrap;}
+  th:first-child, td:first-child{text-align:left;}
+  td{padding:8px 4px; border-bottom:1px solid var(--border); text-align:right; white-space:nowrap;}
+  a.tick{color:var(--accent2); text-decoration:none; font-weight:700;}
+  .krw{display:block; font-size:10.5px; color:var(--sub); font-weight:400;}
+  .news-item{margin-bottom:14px; padding-left:14px; border-left:3px solid var(--accent2);}
+  .news-item b{font-size:14.5px;}
+  .news-item p{margin:5px 0 0; font-size:13px; color:var(--sub); line-height:1.55;}
+  .issue{margin-bottom:12px;}
+  .issue .t{font-size:14px; font-weight:700;}
+  .issue .d{font-size:12.8px; color:var(--sub); margin-top:3px; line-height:1.5;}
+  .pill{display:inline-block; font-size:11px; padding:1px 8px; border-radius:12px; font-weight:700; margin-right:6px;}
+  .pill-good{background:rgba(255,92,92,.12); color:var(--up); border:1px solid rgba(255,92,92,.3);}
+  .pill-bad{background:rgba(74,157,255,.12); color:var(--down); border:1px solid rgba(74,157,255,.3);}
+  .foot{font-size:11px; color:#5c6577; text-align:center; margin-top:14px; line-height:1.6;}
+  .num{font-size:34px; font-weight:800; margin:2px 0;}
+  .idxgrid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px;}
+  .idxbox{background:var(--card2); border:1px solid var(--border); border-radius:14px; padding:14px;}
+  .idxbox .l{font-size:12px; color:var(--sub); font-weight:600;}
+  .idxbox .p{font-size:19px; font-weight:800; margin-top:4px;}
+  .idxbox .c{font-size:12.5px; font-weight:700; margin-top:2px;}
+  .summary-box{background:linear-gradient(135deg, rgba(124,140,255,.14), rgba(244,197,66,.08));
+    border:1px solid rgba(124,140,255,.3); border-radius:16px; padding:18px; margin-top:6px;}
+  .summary-box p{font-size:15px; line-height:1.7; margin:0; font-weight:600;}
+  .badge-num{position:absolute; top:20px; right:22px; font-size:11px; color:var(--sub); font-weight:600;}
+</style>
+</head>
+<body>
+
+<!-- 1. 커버 -->
+<div class="card" style="text-align:center; padding-top:40px;">
+  <span class="badge-num">1 / 9</span>
+  <span class="tag">미국증시 마감 브리핑</span>
+  <h1 style="font-size:26px;">2026년 8월 4일(화) 마감 기준<br>수요일 브리핑</h1>
+  <p class="sub">발행 · 2026-08-05(수) 06:30 KST&nbsp;·&nbsp;다음 정규장 개장 8/5(수) 22:30 KST</p>
+  <div class="divider"></div>
+  <p class="sub" style="font-size:12.5px; line-height:1.7;">
+  中東 리스크 완화(호르무즈 해협 재개방 협상 기대) — 유가 급락 속 3대 지수 사상 최고치 랠리, 다우 54,000선 최초 돌파<br>
+  AMD 2분기 실적 서프라이즈(매출 +50%·데이터센터 2배) — 정규장 +7.0% 급등했으나 실적 발표 후 시간외 -8~10% 급락<br>
+  스페이스X(SPCX) 상장 후 첫 실적 발표 — 매출 92%↑ 컨센서스 상회에도 AI 투자 급증 우려로 시간외 -7%대 하락<br>
+  팔란티어 +29.5%(매출 93%↑) · 캐터필러 +5.6% 실적 서프라이즈, AI·산업재 랠리 지속<br>
+  아마존, 베조스 $41억 규모 지분 매각 공시로 나홀로 -2.32% 조정<br><br>
+  지수 · 밤사이 뉴스 · 보유종목 5선 · 빅테크 · 원자재/금리/환율 · 한국증시 영향까지 한 번에<br><br>
+  ※ 다우 +1.71%(54,000선 최초 돌파)·S&amp;P500 +1.79%(7,737, 2개월來 최고)·나스닥 +2.59%<br>
+  ※ VIX 16.54(+4.29%)로 실적 변동성 확대 반영, 러셀2000은 +1.73% 동반 상승
+  </p>
+</div>
+
+<!-- 2. 3대 지수 -->
+<div class="card">
+  <span class="badge-num">2 / 9</span>
+  <span class="tag">지수 현황</span>
+  <h1>3대 지수 · 러셀2000 · VIX</h1>
+  <h2 style="font-size:12px;">2026.08.04(화) 정규장 종가 · 다음 개장 8/5(수) 22:30 KST</h2>
+  <div class="idxgrid">
+    <div class="idxbox">
+      <div class="l">다우존스</div>
+      <div class="p">54,085.41</div>
+      <div class="c chg-up">▲ +1.71%</div>
+    </div>
+    <div class="idxbox">
+      <div class="l">S&amp;P 500</div>
+      <div class="p">7,737.00</div>
+      <div class="c chg-up">▲ +1.79%</div>
+    </div>
+    <div class="idxbox">
+      <div class="l">나스닥종합</div>
+      <div class="p">26,585.07</div>
+      <div class="c chg-up">▲ +2.59%</div>
+    </div>
+    <div class="idxbox">
+      <div class="l">러셀2000</div>
+      <div class="p">2,981.91</div>
+      <div class="c chg-up">▲ +1.73%</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="name">VIX (변동성지수)</div>
+    <div class="val chg-up">16.54<span class="small">+4.29%, 실적 변동성 확대</span></div>
+  </div>
+  <p class="foot" style="text-align:left; margin-top:12px;">베센트 재무장관이 이란과 호르무즈 해협 재개방과 관련해 "오늘내일 타결 가능성"을 언급하며 중동 리스크가 완화, WTI가 3주來 최저치로 급락했다. 다우존스는 사상 최초로 54,000선을 돌파(+907p)했고 S&amp;P500은 2개월 만에 최고치(7,737)를 새로 썼다. 다만 VIX는 오히려 +4.29% 상승했는데, 이는 AMD·스페이스X 등 대형 실적 발표를 앞두고/직후의 변동성 확대를 반영한 것으로 풀이된다.</p>
+</div>
+
+<!-- 3. 주요 뉴스 -->
+<div class="card">
+  <span class="badge-num">3 / 9</span>
+  <span class="tag">밤사이 주요 뉴스</span>
+  <h1>주가 영향 핵심 이슈</h1>
+  <div class="news-item">
+    <b>① 中東 리스크 완화 — 호르무즈 해협 재개방 기대, 유가 급락</b>
+    <p>베센트 재무장관이 이란측과 협상 중이며 "오늘 내일 호르무즈 해협 재개방 합의가 가능할 수도 있다"고 언급하면서 지정학적 리스크가 완화됐다. 이에 WTI가 -5.23%(배럴당 $76.14)로 3주來 최저치, 브렌트유도 -2.07%($81.77)로 급락하며 위험자산 선호 심리를 자극, 3대 지수 동반 급등을 견인했다.</p>
+  </div>
+  <div class="news-item">
+    <b>② AMD 2분기 실적 서프라이즈 — 정규장 급등 후 시간외 급락</b>
+    <p>AMD는 2분기 매출 $115.4억(전년比 +50%, 컨센 $113.1억 상회), 데이터센터 매출은 전년 대비 2배(+107%) 증가했다고 밝혔다. 조정 EPS $1.66(컨센 $1.61 상회)에 3분기 매출 가이던스도 시장 기대치를 웃돌았다. 실적 기대감에 정규장에서 +7.00%($518.58) 급등했으나, 발표 직후 시간외에서는 -8~10%대로 급락 — 마진·투자 부담에 대한 우려가 반영됐다.</p>
+  </div>
+  <div class="news-item">
+    <b>③ 스페이스X(SPCX) 상장 후 첫 실적 — 매출 서프라이즈에도 AI 투자 부담 부각</b>
+    <p>일론 머스크의 스페이스X는 상장 후 첫 분기 실적에서 매출 $78억(전년比 +92%, 컨센 $68.1억 상회)을 기록했다. 다만 AI 부문 CAPEX가 전년 대비 약 7배 급증하며 영업손실을 기록, 시장은 AI 투자 부담에 주목했다. 정규장에서는 +9.43%($125.33) 급등했으나 실적 발표 후 시간외에서 -7%대 하락. 8/6 대규모 락업 해제를 앞두고 변동성이 커지고 있다.</p>
+  </div>
+  <div class="news-item">
+    <b>④ 팔란티어·캐터필러 실적 서프라이즈 — AI·산업재 랠리 지속</b>
+    <p>팔란티어는 매출이 전년 대비 93% 급증하며 2026년 가이던스를 상향, 주가가 +29.5% 폭등했다. 캐터필러도 분기 매출 $200억을 상회하며 AI發 터빈 수요 확대에 힘입어 +5.6% 상승, 이번 실적 시즌의 AI·산업재 강세 흐름이 이어지고 있다.</p>
+  </div>
+  <div class="news-item">
+    <b>⑤ 아마존, 베조스 지분 매각 공시로 나홀로 조정</b>
+    <p>제프 베조스가 창업자 지분 1,500만주(약 $41억 규모)를 매각하는 사전예약매매(10b5-1) 계획을 공시하면서 아마존 주가가 -2.32%($277.42)로 하락, 전일 사상 최고가 랠리 후 숨고르기에 들어갔다. 뉴저지주 법무장관은 배송기사 임금 관련 반독점 소송도 제기했다.</p>
+  </div>
+</div>
+
+<!-- 4. 보유종목 테이블 -->
+<div class="card">
+  <span class="badge-num">4 / 9</span>
+  <span class="tag">내 보유종목</span>
+  <h1>NEE · SDGR · META · GOOGL · AMD</h1>
+  <h2 style="font-size:12px;">현재가(원화환산, ₩1,429.1/$) · 당일등락 · 기간별 등락률</h2>
+  <table>
+    <tr><th>종목</th><th>현재가</th><th>당일</th><th>1M</th><th>3M</th><th>6M</th><th>12M</th></tr>
+    <tr>
+      <td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/NEE.N/total" target="_blank">NEE</a></td>
+      <td>$87.21<span class="krw">≈₩124,621</span></td>
+      <td class="chg-up">+0.76%</td>
+      <td class="chg-down">-0.3%</td><td class="chg-down">-1.5%*</td><td class="chg-up">+7.2%*</td>
+      <td class="chg-up">+23.3%</td>
+    </tr>
+    <tr>
+      <td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/SDGR.O/total" target="_blank">SDGR</a></td>
+      <td>$15.71<span class="krw">≈₩22,452</span></td>
+      <td class="chg-up">+2.81%</td>
+      <td class="chg-down">-7.6%</td><td class="chg-up">+18.1%*</td><td class="chg-up">+1.9%*</td>
+      <td class="chg-down">-20.4%</td>
+    </tr>
+    <tr>
+      <td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/META.O/total" target="_blank">META</a></td>
+      <td>$587.94<span class="krw">≈₩840,225</span></td>
+      <td class="chg-down">-0.39%</td>
+      <td class="chg-down">-2.1%</td><td class="chg-down">-3.7%*</td>
+      <td class="chg-down">-10.6%*</td><td class="chg-down">-21.0%</td>
+    </tr>
+    <tr>
+      <td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/GOOGL.O/total" target="_blank">GOOGL</a></td>
+      <td>$377.65<span class="krw">≈₩539,704</span></td>
+      <td class="chg-up">+1.11%</td>
+      <td class="chg-up">+3.1%</td><td class="chg-down">-1.4%*</td><td class="chg-up">+28.5%*</td><td class="chg-up">+99.7%</td>
+    </tr>
+    <tr>
+      <td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/AMD.O/total" target="_blank">AMD</a></td>
+      <td>$518.58<span class="krw">≈₩741,056</span></td>
+      <td class="chg-up">+7.00%</td>
+      <td class="chg-down">-6.1%</td><td class="chg-up">+10.9%*</td>
+      <td class="chg-up">+61.5%*</td>
+      <td class="chg-up">+202.0%</td>
+    </tr>
+  </table>
+  <p class="foot" style="text-align:left;">종목명 클릭 시 네이버증권 해외주식 페이지로 이동. 환율 1,429.1원/달러(8/4 기준) 적용. AMD는 정규장 종가 기준(시간외 실적 발표 후 -8~10%대 추가 하락, 다음 섹션 참고). *표시는 데이터 확인 제한으로 추정치 — 1개월은 실제 종가 비교, 3개월은 약 2.4개월 시점 종가 대비 근사치, 6개월은 3개월·12개월 수익률 보간 추정치.</p>
+</div>
+
+<!-- 5. 보유종목 이슈 -->
+<div class="card">
+  <span class="badge-num">5 / 9</span>
+  <span class="tag">보유종목 이슈</span>
+  <h1>종목별 최신 호재·악재</h1>
+  <div class="issue">
+    <div class="t">NEE</div>
+    <div class="d">+0.76%로 안정적인 흐름을 이어갔다. 도미니언에너지와의 합병 절차가 순조롭게 진행 중이며, 브룩필드와 공동으로 켄터키주 옛 DOE 부지에 $1,000억 규모 AI 데이터센터·전력 허브를 개발하는 계획도 이어가고 있다. 분기 배당 $0.6232 선언, BMO캐피탈은 목표주가를 $96로 상향했다.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-bad">주시</span>SDGR</div>
+    <div class="d">+2.81% 상승 마감했으나, 오늘(8/5) 장마감 후 2분기 실적 발표를 앞두고 변동성이 커질 전망이다. 최근 출시한 AI 코사이언티스트 'Bunsen'이 향후 라이선스 매출 확대에 기여할지가 관전 포인트이며, 애널리스트 컨센서스는 "매수" 유지·목표주가 $20.57(현재가 대비 +31% 여력).</div>
+  </div>
+  <div class="issue">
+    <div class="t">META</div>
+    <div class="d">-0.39%로 소폭 조정, 전일(8/3) +6.02% 급등에 대한 숨고르기 흐름이다. 지난 실적(7/29) 발표 후 AI 지출 우려로 11거래일 연속 하락했던 것에서 최근 반등 시도 중이며, 로스캐피탈은 목표주가를 $820→$750으로 하향한 반면 캐시 우드(아크인베스트)는 저점 매수에 나섰다.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-good">호재</span>GOOGL</div>
+    <div class="d">+1.11%로 추가 상승, 최근 실적(7/22) 이후 클라우드 성장 호평과 구글 딥마인드의 "AI 다음 단계 시작" 코멘트에 힘입어 52주 기준 +99.7% 급등한 상태다. 앤스로픽向 텍사스 데이터센터에 대한 $150억 대출 지원 및 전력·리스 보증 뉴스도 긍정적으로 작용했다.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-bad">주시</span>AMD</div>
+    <div class="d">2분기 매출·가이던스 모두 컨센서스를 상회(데이터센터 매출 2배)했음에도 시간외 -8~10%대 급락 중이다. 마진 및 향후 AI 투자 부담에 대한 투자자들의 눈높이가 높아진 결과로, 9일 개장 전 콜에서 나올 추가 코멘트에 따라 변동성이 이어질 수 있다.</div>
+  </div>
+</div>
+
+<!-- 6. 빅테크 + 스페이스X -->
+<div class="card">
+  <span class="badge-num">6 / 9</span>
+  <span class="tag">빅테크 & 스페이스X</span>
+  <h1>매그니피센트7 + SPCX</h1>
+  <h2 style="font-size:12px;">2026.08.04(화) 종가 기준</h2>
+  <table>
+    <tr><th>종목</th><th>현재가</th><th>당일등락</th></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/AAPL.O/total" target="_blank">AAPL</a></td><td>$309.38</td><td class="chg-up">+1.96%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/MSFT.O/total" target="_blank">MSFT</a></td><td>$492.81</td><td class="chg-up">+1.06%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/GOOGL.O/total" target="_blank">GOOGL</a></td><td>$377.65</td><td class="chg-up">+1.11%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/AMZN.O/total" target="_blank">AMZN</a></td><td>$277.42</td><td class="chg-down">-2.32%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/META.O/total" target="_blank">META</a></td><td>$587.94</td><td class="chg-down">-0.39%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/NVDA.O/total" target="_blank">NVDA</a></td><td>$211.94</td><td class="chg-up">+2.56%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/TSLA.O/total" target="_blank">TSLA</a></td><td>$327.35</td><td class="chg-up">+1.64%</td></tr>
+    <tr><td><a class="tick" href="https://m.stock.naver.com/worldstock/stock/SPCX.O/total" target="_blank">SPCX (스페이스X)</a></td><td>$125.33</td><td class="chg-up">+9.43%<span class="krw">시간외 -7.1%*</span></td></tr>
+  </table>
+  <p class="foot" style="text-align:left;">중동 리스크 완화·반도체 랠리에 힘입어 아마존을 제외한 매그니피센트7 전 종목이 상승했다. AMD(+7.00%, 표4 참고)와 SPCX는 정규장 급등 후 실적 발표 직후 시간외에서 각각 -8~10%, -7%대로 반락하며 변동성이 확대됐다. *시간외가는 참고용 추정치.</p>
+</div>
+
+<!-- 7. 원자재/금리/환율 -->
+<div class="card">
+  <span class="badge-num">7 / 9</span>
+  <span class="tag">원자재 · 금리 · 환율</span>
+  <h1>커머디티 & 채권 & FX</h1>
+  <table>
+    <tr><th>구분</th><th>현재가</th><th>비고</th></tr>
+    <tr><td>금 (Gold)</td><td>$4,090.00</td><td class="small chg-up">+0.79%</td></tr>
+    <tr><td>은 (Silver)</td><td>$60.29</td><td class="small chg-up">강세</td></tr>
+    <tr><td>구리 (Copper)</td><td>$6.63/lb</td><td class="small chg-up">+1.74%</td></tr>
+    <tr><td>알루미늄</td><td>$3,200/t*</td><td class="small">보합권 추정</td></tr>
+    <tr><td>천연가스</td><td>$2.77/MMBtu</td><td class="small chg-down">-0.31%</td></tr>
+    <tr><td>WTI 유가</td><td>$76.14</td><td class="small chg-down">-5.23%, 3주來 최저</td></tr>
+    <tr><td>브렌트유</td><td>$81.77</td><td class="small chg-down">-2.07%</td></tr>
+    <tr><td>美 2년물</td><td>4.21%</td><td class="small">소폭 하락</td></tr>
+    <tr><td>美 10년물</td><td>4.63%</td><td class="small">안정권</td></tr>
+    <tr><td>美 30년물</td><td>5.20%</td><td class="small">최근 고점서 반락 유지</td></tr>
+    <tr><td>USD/KRW</td><td>1,429.1원</td><td class="small">1,420~1,435원 레인지</td></tr>
+  </table>
+  <p class="foot" style="text-align:left;">호르무즈 해협 재개방 협상 기대로 WTI·브렌트유가 동반 급락(-5.2%·-2.1%)했다. 반면 금·은은 위험선호 회복 속에서도 강세를 유지하며 각각 $4,090·$60선을 지켰고, 구리도 산업 수요 기대에 +1.7% 상승했다. 국채금리는 10년물 4.63%로 안정적인 흐름, 원/달러 환율은 1,420~1,435원 레인지에서 등락 중이다.</p>
+</div>
+
+<!-- 8. 한국증시 영향 분석 -->
+<div class="card">
+  <span class="badge-num">8 / 9</span>
+  <span class="tag">한국증시 영향 분석</span>
+  <h1>美 증시 흐름이 코스피/코스닥에 미칠 영향</h1>
+  <div class="issue">
+    <div class="t"><span class="pill pill-good">호재</span>3대 지수 사상 최고 랠리 — 코스피 반등 시도에 우호적 배경</div>
+    <div class="d">다우 54,000선 최초 돌파, S&amp;P500 2개월來 최고치 경신 등 美 증시의 강한 랠리는 수요일(8/5) 코스피 개장에 긍정적 배경으로 작용할 전망이다. 유가 급락으로 인플레이션·금리 부담이 완화된 점도 위험자산 선호 심리에 우호적이다.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-bad">주시</span>AMD·SPCX 시간외 급락 — 국내 반도체·AI 밸류체인 변동성 유의</div>
+    <div class="d">AMD와 스페이스X 모두 실적 서프라이즈에도 불구하고 시간외에서 큰 폭(-7~10%대)으로 하락했다. 이는 AI 투자 확대에 대한 시장의 눈높이가 높아졌다는 신호로, SK하이닉스·삼성전자·한미반도체 등 국내 반도체·AI 밸류체인 종목의 개장 초반 변동성 확대 요인이 될 수 있다.</div>
+  </div>
+  <div class="issue">
+    <div class="t"><span class="pill pill-good">호재</span>국제유가 급락 — 국내 항공·화학 원가 부담 완화, 정유주는 압박</div>
+    <div class="d">호르무즈 해협 리스크 완화에 따른 유가 급락은 항공·해운·화학 등 원자재 수입 의존 업종의 원가 부담을 낮추는 반면, SK이노베이션·에쓰오일 등 정유주에는 정제마진 압박 요인으로 작용할 수 있어 업종별 희비가 엇갈릴 전망이다.</div>
+  </div>
+  <div class="issue">
+    <div class="t">원/달러 환율 1,420~1,435원 레인지 — 외국인 수급 안정적</div>
+    <div class="d">원/달러 환율이 비교적 안정적인 레인지에서 움직이고 있어 외국인 수급에 미치는 부담은 제한적일 것으로 보인다. 다만 美 국채 10년물 금리(4.63%)의 방향성에 따라 환율 변동성이 재차 확대될 가능성은 열어둘 필요가 있다.</div>
+  </div>
+  <p class="foot" style="text-align:left; margin-top:4px;">종합적으로 간밤 美 증시의 사상 최고 랠리는 수요일 코스피 반등에 우호적 배경이 될 전망이나, AMD·스페이스X의 실적 후 시간외 급락은 반도체·AI 대형주 중심의 변동성 확대 신호로 개장 초반 주의가 필요하다. 유가 급락에 따른 항공·화학·정유 업종별 차별화 흐름도 함께 주시해야 한다.</p>
+</div>
+
+<!-- 9. 한줄 요약 -->
+<div class="card" style="text-align:center;">
+  <span class="badge-num">9 / 9</span>
+  <span class="tag">오늘의 한 줄 요약</span>
+  <h1 style="margin-bottom:16px;">Summary</h1>
+  <div class="summary-box">
+    <p>호르무즈 해협 재개방 기대에 유가 급락(WTI -5.23%)하며 3대 지수 사상 최고 랠리(다우 54,000선 최초 돌파·S&amp;P 7,737·나스닥 +2.59%) — AMD·스페이스X 모두 실적 서프라이즈에도 AI 투자 부담 우려로 시간외 급락(-7~10%대), 팔란티어(+29.5%)·캐터필러(+5.6%)는 실적 랠리 지속 — 아마존은 베조스 지분 매각 공시로 나홀로 -2.32% — 국내 증시는 美 지수 랠리에 우호적이나 반도체·AI 밸류체인은 AMD·SPCX발 변동성 유의 필요</p>
+  </div>
+  <p class="foot" style="margin-top:18px;">
+  본 브리핑은 공개 보도·시세 정보를 바탕으로 자동 정리한 자료이며 투자 권유가 아닙니다.<br>
+  일부 수치는 확인 제한으로 추정치가 포함되어 있습니다.<br><br>
+  미국증시 브리핑 · 2026-08-05 06:30 KST 발행 (8/4 화 마감 데이터 · 다음 정규장 8/5 수 22:30 KST 개장)
+  </p>
+</div>
+
+</body>
+</html>
