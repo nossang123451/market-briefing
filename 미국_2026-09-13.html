@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미국증시 마감 브리핑 · 2026.09.13</title>
+<style>
+  :root{
+    --bg:#0b0e14;
+    --card:#141926;
+    --card2:#1a2030;
+    --border:#262d3f;
+    --text:#eef1f8;
+    --sub:#9aa4bd;
+    --up:#ff5c5c;
+    --down:#4d9fff;
+    --accent:#ffd54a;
+    --accent2:#7c8cff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:linear-gradient(180deg,#0b0e14 0%,#0d1120 100%);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{
+    width:100%;
+    max-width:460px;
+    padding:0 0 28px;
+  }
+  .card{
+    margin:14px 14px 0;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:20px 18px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+  }
+  .cover{
+    text-align:center;
+    background:radial-gradient(circle at 30% 20%, #1c2440 0%, #0e1220 70%);
+    padding:36px 20px 28px;
+  }
+  .cover .badge{
+    display:inline-block;
+    background:var(--accent);
+    color:#111;
+    font-weight:700;
+    font-size:12px;
+    padding:4px 10px;
+    border-radius:20px;
+    letter-spacing:0.5px;
+  }
+  .cover h1{
+    font-size:26px;
+    margin:16px 0 6px;
+    line-height:1.35;
+  }
+  .cover .date{
+    color:var(--sub);
+    font-size:14px;
+    margin-bottom:4px;
+  }
+  .cover .note{
+    color:var(--sub);
+    font-size:12px;
+    margin-top:14px;
+    line-height:1.5;
+  }
+  h2.sec-title{
+    font-size:15px;
+    color:var(--accent2);
+    margin:0 0 14px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    letter-spacing:0.3px;
+  }
+  .idx-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .idx-box{
+    background:var(--card2);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px;
+  }
+  .idx-box .name{font-size:12px;color:var(--sub);margin-bottom:4px;}
+  .idx-box .val{font-size:18px;font-weight:700;}
+  .idx-box .chg{font-size:13px;font-weight:600;margin-top:2px;}
+  .up{color:var(--up);}
+  .down{color:var(--down);}
+  .news-item{
+    background:var(--card2);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px 14px;
+    margin-bottom:10px;
+    font-size:13px;
+    line-height:1.55;
+  }
+  .news-item:last-child{margin-bottom:0;}
+  .news-item b{color:var(--accent);}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:12px;
+  }
+  th,td{
+    padding:8px 6px;
+    text-align:center;
+    border-bottom:1px solid var(--border);
+  }
+  th{
+    color:var(--sub);
+    font-weight:600;
+    font-size:11px;
+  }
+  td.name-cell{text-align:left;}
+  td.name-cell a{color:var(--text);text-decoration:none;font-weight:700;}
+  td.name-cell a:after{content:" ↗";color:var(--accent2);font-size:10px;}
+  .krw{display:block;color:var(--sub);font-size:10px;}
+  .note-small{
+    font-size:11px;
+    color:var(--sub);
+    margin-top:10px;
+    line-height:1.5;
+  }
+  .issue-box{
+    background:var(--card2);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px 14px;
+    margin-bottom:10px;
+  }
+  .issue-box:last-child{margin-bottom:0;}
+  .issue-box .tk{
+    display:inline-block;
+    font-size:12px;
+    font-weight:800;
+    color:#111;
+    background:var(--accent);
+    padding:2px 8px;
+    border-radius:6px;
+    margin-bottom:6px;
+  }
+  .issue-box p{margin:0;font-size:12.5px;line-height:1.6;color:var(--text);}
+  .summary-box{
+    background:linear-gradient(135deg,#1c2440,#141926);
+    border:1px solid var(--accent2);
+    border-radius:14px;
+    padding:18px;
+    font-size:14px;
+    line-height:1.7;
+    text-align:center;
+  }
+  .footer-note{
+    text-align:center;
+    color:var(--sub);
+    font-size:11px;
+    padding:20px 24px 0;
+    line-height:1.6;
+  }
+  .kr-analysis p{
+    font-size:13px;
+    line-height:1.7;
+    margin:0 0 10px;
+  }
+  .kr-analysis p:last-child{margin-bottom:0;}
+  .tag{
+    display:inline-block;
+    background:var(--card2);
+    border:1px solid var(--border);
+    color:var(--accent2);
+    font-size:10px;
+    padding:2px 7px;
+    border-radius:20px;
+    margin-right:4px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="card cover">
+    <span class="badge">US MARKET CLOSE · 9/11(금) 마감</span>
+    <h1>미국증시 마감 브리핑</h1>
+    <div class="date">2026년 9월 13일(일) · 한국시간 오전 브리핑</div>
+    <div class="note">미 동부시간 9/11(금) 정규장 마감 기준(주말 연속 브리핑, 다음 정규장은 9/14(월) 밤 22:30 개장)<br>美 8월 CPI가 예상에 부합했지만(전월비 +0.4%·전년비 +3.4%) 근원 CPI는 예상보다 뜨거워(+0.3%) 9월 FOMC 금리인상 확률이 90%까지 치솟았다. 그럼에도 3대지수는 4거래일 연속 하락을 끊고 반등했다(다우 +0.98%·S&amp;P +0.86%·나스닥 +0.96%). 국채금리는 2년물부터 30년물까지 전구간 새 52주 신고가를 또 경신했고, 유가는 숨고르기(WTI -2.37%·브렌트 -2.81%)했지만 주간으로는 8%대 급등을 기록했다. 내일(월) 베센트 재무장관의 대형은행 제재 발표, 화요일(9/15)부터 FOMC 회의가 시작돼 수요일(9/16) 금리결정이 최대 변수다.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">📊 3대 지수 &amp; 변동성</h2>
+    <div class="idx-grid">
+      <div class="idx-box">
+        <div class="name">다우존스</div>
+        <div class="val">52,573.29</div>
+        <div class="chg up">▲ 509.19 (+0.98%)</div>
+      </div>
+      <div class="idx-box">
+        <div class="name">S&amp;P 500</div>
+        <div class="val">7,656.98</div>
+        <div class="chg up">▲ 65.28 (+0.86%)</div>
+      </div>
+      <div class="idx-box">
+        <div class="name">나스닥종합</div>
+        <div class="val">26,333.04</div>
+        <div class="chg up">▲ 251.31 (+0.96%)</div>
+      </div>
+      <div class="idx-box">
+        <div class="name">러셀2000</div>
+        <div class="val">2,903.34</div>
+        <div class="chg up">▲ 13.34 (+0.45%)</div>
+      </div>
+    </div>
+    <div class="idx-box" style="margin-top:10px;">
+      <div class="name">VIX (공포지수)</div>
+      <div class="val">15.92<span class="down" style="font-size:13px;"> ▼ 1.92 (-10.79%)</span></div>
+    </div>
+    <div class="note-small">美 8월 CPI는 전월비 +0.4%·전년비 +3.4%로 예상에 부합했으나 근원 CPI가 전월비 +0.3%(예상 +0.2%)로 예상보다 뜨거웠다. CME 페드워치 기준 9월 FOMC 금리인상 확률은 CPI 발표 전 70%에서 발표 후 90%까지 급등했다. 그럼에도 3대지수는 4거래일 연속 하락을 끊고 반등에 성공했으며, VIX는 10%대 급락하며 공포심리가 완화됐다. 국채금리는 2년물(4.63%)부터 30년물(5.35%내외)까지 전 구간이 또다시 52주 신고가를 경신했다. 주간 기준으로는 S&amp;P -0.8%·다우 -1.6%·나스닥 -0.7%로 3대지수 모두 하락 마감했다.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">🌙 밤사이 주요 뉴스 &amp; 주말 동향</h2>
+    <div class="news-item"><b>8월 CPI 예상 부합, 그러나 근원물가는 예상 상회:</b> 8월 소비자물가지수(CPI)가 전월비 +0.4%·전년비 +3.4%로 다우존스 예상치에 부합했다. 다만 식품·에너지를 제외한 근원 CPI는 전월비 +0.3%로 예상(+0.2%)을 웃돌았고, 연율로는 +2.4%를 기록해 2021년 3월 이후 최저치였다. 9월 FOMC 금리인상 확률은 CPI 발표 직후 70%에서 90%로 급등했다(9/11 CME 페드워치 기준).</div>
+    <div class="news-item"><b>4거래일 연속 하락 끊고 반등, 그러나 주간으로는 하락 마감:</b> 3대지수는 CPI 지표 소화 후 개장부터 상승 출발해 장중 내내 강세를 유지하며 4거래일 연속 하락세를 끊었다. 다만 주간 기준으로는 S&amp;P 500 -0.8%, 다우 -1.6%, 나스닥 -0.7%로 3대지수 모두 하락 마감했다.</div>
+    <div class="news-item"><b>유가 숨고르기, 그러나 주간 기준 8%대 급등:</b> WTI는 2.37% 내린 배럴당 100.05달러, 브렌트유는 2.81% 내린 104.61달러로 마감했으나 두 유종 모두 주간 기준으로는 8%가량 급등했다. 후티 반군의 예멘 모카 항구 장악과 사우디 송유관 인근 연기 포착 등 중동發 공급 차질 우려가 이어지는 가운데, IEA는 올해 세계 원유 공급이 하루 570만 배럴(약 6%) 줄어들 것으로 전망을 하향 조정했다.</div>
+    <div class="news-item"><b>[주말] 베센트, 월요일 "대형 은행" 제재 예고 재확인:</b> 스콧 베센트 재무장관은 9/11(현지) "9·11 희생자를 기리기 위해" 월요일(9/14)에 이란 관련 자금 지원 혐의로 대형 은행을 제재할 것이라고 밝혔다(은행명·국가는 미공개). 트럼프 행정부는 지난달 "이코노믹 아웃캐스트" 작전으로 약 60개 개인·기업·선박을 제재한 데 이어 이번에도 추가 제재를 예고했다.</div>
+    <div class="news-item"><b>[주말] 9월 FOMC 회의 일정 확정, 인상 확률 90%대 유지:</b> FOMC 정례회의는 9/15(화)~16(수) 이틀간 열리며, 금리결정 발표는 현지시간 9/16(수) 오후 2시(한국시간 9/17(목) 새벽 3시)다. CME 페드워치 기준 25bp 인상 확률은 여전히 약 90%로, 인상 시 기준금리는 3.50~3.75%에서 3.75~4.00%로 오른다. 7월 고용·소매판매 지표 부진은 동결 가능성도 일부 뒷받침하고 있어 발표 직전까지 확률 변동이 이어질 수 있다.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">💼 보유 종목 현황</h2>
+    <table>
+      <tr>
+        <th style="text-align:left;">종목</th>
+        <th>현재가</th>
+        <th>당일</th>
+        <th>1개월*</th>
+        <th>3개월*</th>
+        <th>6개월*</th>
+        <th>1년</th>
+      </tr>
+      <tr>
+        <td class="name-cell"><a href="https://m.stock.naver.com/worldstock/stock/NEE.N/total" target="_blank">NEE</a><span class="krw">₩111,077</span></td>
+        <td>$82.53</td>
+        <td class="up">+0.11%</td>
+        <td class="down">-6.35%</td>
+        <td class="down">-2.90%</td>
+        <td class="up">+1.55%</td>
+        <td class="up">+16.20%</td>
+      </tr>
+      <tr>
+        <td class="name-cell"><a href="https://m.stock.naver.com/worldstock/stock/SDGR.O/total" target="_blank">SDGR</a><span class="krw">₩25,101</span></td>
+        <td>$18.65</td>
+        <td class="down">-0.80%</td>
+        <td class="up">+24.19%</td>
+        <td class="up">+18.30%</td>
+        <td class="up">+10.78%</td>
+        <td class="down">-3.39%†</td>
+      </tr>
+      <tr>
+        <td class="name-cell"><a href="https://m.stock.naver.com/worldstock/stock/META.O/total" target="_blank">META</a><span class="krw">₩879,640</span></td>
+        <td>$653.57</td>
+        <td class="up">+1.43%</td>
+        <td class="up">+1.53%</td>
+        <td class="up">+15.07%</td>
+        <td class="up">+3.67%</td>
+        <td class="down">-13.09%</td>
+      </tr>
+      <tr>
+        <td class="name-cell"><a href="https://m.stock.naver.com/worldstock/stock/GOOGL.O/total" target="_blank">GOOGL</a><span class="krw">₩457,350</span></td>
+        <td>$339.81</td>
+        <td class="up">+2.17%</td>
+        <td class="down">-2.08%</td>
+        <td class="down">-4.95%</td>
+        <td class="up">+18.65%</td>
+        <td class="up">+42.08%</td>
+      </tr>
+      <tr>
+        <td class="name-cell"><a href="https://m.stock.naver.com/worldstock/stock/AMD.O/total" target="_blank">AMD</a><span class="krw">₩691,160</span></td>
+        <td>$513.53</td>
+        <td class="up">+1.97%</td>
+        <td class="down">-5.68%</td>
+        <td class="up">+5.25%</td>
+        <td class="up">+58.66%</td>
+        <td class="up">+221.88%</td>
+      </tr>
+    </table>
+    <div class="note-small">종목명 클릭 시 네이버증권 해외주식 페이지로 이동. 가격·등락률은 9/11(금) 정규장 마감 기준(현지시간, 주말 연속 브리핑이라 신규 종가 없음). 원화 환산은 원/달러 1,345.9원 기준(9/11 서울외환시장 종가).<br>* 1개월·3개월·6개월은 전일 카드 수치를 최신 종가로 환산한 근사치로, 참고용 추정치입니다. 1년 수익률은 거래소 통계 페이지 기준 최신 확정치입니다(SDGR은 통계 페이지 갱신 지연으로 전전일(9/10) 종가 기준 수치, † 표시). SDGR 1년 수익률은 작년 고점 대비 조정을 반영한 수치로, 최근 1~6개월 단기 반등폭(+11~24%)과는 별개 지표입니다.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">🔍 보유종목 이슈</h2>
+    <div class="issue-box">
+      <span class="tk">NEE +0.11%</span>
+      <p>도미니언 에너지 인수합병이 주주 승인을 마치고 규제 심사 단계를 이어가는 가운데, 특별한 개별 뉴스 없이 국채금리가 전구간 신고가를 재차 경신하는 와중에도 소폭 상승 마감했다. 주말 특별 이슈 없음.</p>
+    </div>
+    <div class="issue-box">
+      <span class="tk">SDGR -0.80%</span>
+      <p>전일 텍토라 라이선스 계약 재료가 소진된 뒤 특별한 신규 뉴스 없이 숨고르기 흐름을 이어갔다. 최근 1~6개월 반등폭(+11~24%)과 별개로 거래소 통계 페이지 기준 1년 수익률은 -3.39%로 집계됐다.</p>
+    </div>
+    <div class="issue-box">
+      <span class="tk">META +1.43%</span>
+      <p>AI 개인비서 '뮤즈'의 흥행이 이어지며 강세를 지속했다. 웨드부시는 목표주가를 595달러에서 650달러로 상향 조정했다. 주말 특별 이슈 없음.</p>
+    </div>
+    <div class="issue-box">
+      <span class="tk">GOOGL +2.17%</span>
+      <p>AI 에이전트 스타트업 '메카나이즈' 인수를 15억달러 이상에 완료했다는 소식과 Avid Technology와의 AI 협력 확대 소식이 겹치며 빅테크 중 가장 큰 폭으로 상승했다.</p>
+    </div>
+    <div class="issue-box">
+      <span class="tk">AMD +1.97%</span>
+      <p>특별한 개별 악재 없이 최근 시티 콘퍼런스에서 제시한 AI TAM(총유효시장) 3조달러 전망 효과가 이어지며 반도체株 전반의 강세 속에 동반 상승했다. 자나두 퀀텀과 신규 양자-고전 통신 솔루션 '백라인'을 공동 발표했다.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">🚀 빅테크 &amp; 스페이스X</h2>
+    <table>
+      <tr>
+        <th style="text-align:left;">종목</th>
+        <th>현재가</th>
+        <th>당일 등락</th>
+      </tr>
+      <tr><td class="name-cell">AAPL</td><td>$334.71</td><td class="up">+2.49%</td></tr>
+      <tr><td class="name-cell">MSFT</td><td>$493.87</td><td class="up">+0.29%</td></tr>
+      <tr><td class="name-cell">AMZN</td><td>$254.75</td><td class="up">+1.14%</td></tr>
+      <tr><td class="name-cell">GOOGL</td><td>$339.81</td><td class="up">+2.17%</td></tr>
+      <tr><td class="name-cell">META</td><td>$653.57</td><td class="up">+1.43%</td></tr>
+      <tr><td class="name-cell">NVDA</td><td>$219.73</td><td class="up">+0.63%</td></tr>
+      <tr><td class="name-cell">TSLA</td><td>$364.76</td><td class="up">+0.33%</td></tr>
+      <tr><td class="name-cell">SpaceX(SPCX)</td><td>$146.94</td><td class="down">-0.84%</td></tr>
+    </table>
+    <div class="note-small">가격은 9/11(금) 마감 기준(주말 연속 브리핑). 빅테크 7종목 중 6종목이 상승 마감했으며, 구글(+2.17%)·애플(+2.49%)이 가장 두드러진 강세를 보였다. 스페이스X는 9/12 유인 우주선 Crew-13 발사가 산화제 누출로 연기된 것으로 전해졌으나 주가에 직접 영향은 제한적일 전망이다.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">🛢️ 원자재 · 금리 · 환율</h2>
+    <table>
+      <tr><th style="text-align:left;">항목</th><th>현재가</th><th>등락</th></tr>
+      <tr><td class="name-cell">금(Gold)</td><td>$4,408.90/oz</td><td class="up">+0.04%</td></tr>
+      <tr><td class="name-cell">은(Silver)</td><td>$65.19/oz</td><td class="up">+0.40%</td></tr>
+      <tr><td class="name-cell">구리(Copper)</td><td>$6.46/lb†</td><td class="down">-0.07%†</td></tr>
+      <tr><td class="name-cell">알루미늄</td><td>$3,245/톤†</td><td class="down">-1.06%†</td></tr>
+      <tr><td class="name-cell">천연가스</td><td>$2.83/MMBtu†</td><td class="down">-0.12%†</td></tr>
+      <tr><td class="name-cell">WTI유</td><td>$100.05/배럴</td><td class="down">-2.37%</td></tr>
+      <tr><td class="name-cell">브렌트유</td><td>$104.61/배럴</td><td class="down">-2.81%</td></tr>
+      <tr><td class="name-cell">美 2년물</td><td>4.63%</td><td class="up">▲8bp(52주 신고가)</td></tr>
+      <tr><td class="name-cell">美 10년물</td><td>4.97%</td><td class="up">52주 신고가</td></tr>
+      <tr><td class="name-cell">美 30년물</td><td>5.35%</td><td class="up">2007.6來 최고 근접</td></tr>
+      <tr><td class="name-cell">USD/KRW</td><td>1,345.9원</td><td class="up">+6.7원</td></tr>
+    </table>
+    <div class="note-small">유가·금리·환율 수치는 9/11(금) 정규장/서울외환시장 마감 기준(주말 연속 브리핑이라 신규 확정치 없음). 유가는 CPI 발표 후 숨고르기(WTI -2.37%·브렌트 -2.81%)했지만 주간 기준으로는 8%대 급등을 기록했다. 국채금리는 2년물(4.63%)부터 30년물(5.35%내외)까지 전 구간이 새 52주 신고가를 경신했다. † 표시 항목은 데이터 갱신 지연 등으로 근사치·직전 확인 시세로 표기했습니다.</div>
+  </div>
+
+  <div class="card kr-analysis">
+    <h2 class="sec-title">🇰🇷 한국증시 영향 분석</h2>
+    <p><span class="tag">FOMC D-3, 금리인상 확률 90%</span> 9월 FOMC 회의가 9/15(화)~16(수) 열리며 금리결정은 한국시간 9/17(목) 새벽 발표될 예정입니다. CME 페드워치 기준 25bp 인상 확률이 약 90%로 유지되고 있어, 결과에 따라 원/달러 환율과 국내 채권시장이 발표 전후로 크게 흔들릴 가능성이 있습니다.</p>
+    <p><span class="tag">대형은행 제재 예고, 지정학 리스크</span> 베센트 재무장관이 9/14(월) 이란 관련 자금 지원 혐의로 대형 은행을 제재하겠다고 예고했습니다. 은행명이 아직 공개되지 않아 시장의 경계심이 있으며, 발표 내용에 따라 글로벌 금융주·환시장에 단기 충격이 있을 수 있습니다.</p>
+    <p><span class="tag">국채금리 전구간 신고가 지속</span> 美 국채금리가 2년물부터 30년물까지 전 구간에서 또다시 52주 신고가를 경신했습니다. 미국發 금리 상승 압력이 지속되는 만큼, 국내 금리 민감 업종(건설·부동산·금융)의 자금조달 비용 부담도 함께 늘어날 수 있습니다.</p>
+    <p><span class="tag">유가 주간 급등, 비용 압박</span> WTI·브렌트유가 지난주 후반 숨고르기했지만 주간 기준 8%대 급등을 기록했습니다. 원유 수입 의존도가 높은 한국 경제에는 비용 상승 압박으로 이어질 수 있어 정유·항공·물류 업종의 수익성에 주시가 필요합니다.</p>
+    <p><span class="tag">다음 변수</span> 월요일 베센트의 대형은행 제재 발표, 화~수요일 FOMC 회의 및 수요일 밤(한국시간 목요일 새벽) 금리결정이 이번 주 최대 변수입니다. 인플레이션·금리·지정학 리스크가 동시에 부각되는 국면인 만큼 국내 증시도 주중 변동성 확대에 대비할 필요가 있습니다.</p>
+  </div>
+
+  <div class="card">
+    <div class="summary-box">
+      💬 [9/11(금) 마감 기준·주말 연속 브리핑] 8월 CPI 예상 부합에도 근원물가 서프라이즈로 9월 FOMC 금리인상 확률 90%, 3대지수는 4거래일 연속 하락을 끊고 반등(다우 +0.98%·S&amp;P +0.86%·나스닥 +0.96%). 내일(월) 베센트의 대형은행 제재 발표, 화~수요일 FOMC 회의·수요일 금리결정이 이번 주 최대 변수. 다음 정규장은 9/14(월) 밤 22:30 개장.
+    </div>
+  </div>
+
+  <div class="footer-note">
+    본 브리핑은 투자 판단의 참고 자료이며 투자 권유가 아닙니다. 수치는 공개 시세·보도 기준이며 일부 항목(†표시)은 확인 시점·참조가에 따라 실제와 오차가 있을 수 있습니다.<br><br>
+    미국증시 브리핑 · nossang123451
+  </div>
+
+</div>
+</body>
+</html>
