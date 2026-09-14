@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미국증시 마감 브리핑 · 2026.09.15</title>
+<style>
+  :root{
+    --bg:#0b0e14;
+    --card:#141926;
+    --card2:#1a2030;
+    --border:#262d3f;
+    --text:#eef1f8;
+    --sub:#9aa4bd;
+    --up:#ff5c5c;
+    --down:#4d9fff;
+    --accent:#ffd54a;
+    --accent2:#7c8cff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:linear-gradient(180deg,#0b0e14 0%,#0d1120 100%);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{
+    width:100%;
+    max-width:460px;
+    padding:0 0 28px;
+  }
+  .card{
+    margin:14px 14px 0;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:20px 18px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+  }
+  .cover{
+    text-align:center;
+    background:radial-gradient(circle at 30% 20%, #1c2440 0%, #0e1220 70%);
+    padding:36px 20px 28px;
+  }
+  .cover .badge{
+    display:inline-block;
+    background:var(--accent);
+    color:#111;
+    font-weight:700;
+    font-size:12px;
+    padding:4px 10px;
+    border-radius:20px;
+    letter-spacing:0.5px;
+  }
+  .cover h1{
+    font-size:26px;
+    margin:16px 0 6px;
+    line-height:1.35;
+  }
+  .cover .date{
+    color:var(--sub);
+    font-size:14px;
+    margin-bottom:4px;
+  }
+  .cover .note{
+    color:var(--sub);
+    font-size:12px;
+    margin-top:14px;
+    line-height:1.5;
+  }
+  h2.sec-title{
+    font-size:15px;
+    color:var(--accent2);
+    margin:0 0 14px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    letter-spacing:0.3px;
+  }
+  .idx-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .idx-box{
+    background:var(--card2);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px;
+  }
+  .idx-box .name{font-size:12px;color:var(--sub);margin-bottom:4px;}
+  .idx-box .val{font-size:18px;font-weight:700;}
+  .idx-box .chg{font-size:13px;font-weight:600;margin-top:2px;}
+  .up{color:var(--up);}
+  .down{color:var(--down);}
+  .news-item{
+    background:var(--card2);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px 14px;
+    margin-bottom:10px;
+    font-size:13px;
+    line-height:1.55;
+  }
+  .news-item:last-child{margin-bottom:0;}
+  .news-item b{color:var(--accent);}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:12px;
+  }
+  th,td{
+    padding:8px 6px;
+    text-align:center;
+    border-bottom:1px solid var(--border);
+  }
+  th{
+    color:var(--sub);
+    font-weight:600;
+    font-size:11px;
+  }
+  td.name-cell{text-align:left;}
+  td.name-cell a{color:var(--text);text-decoration:none;font-weight:700;}
+  td.name-cell a:after{content:" ↗";color:var(--accent2);font-size:10px;}
+  .krw{display:block;color:var(--sub);font-size:10px;}
+  .note-small{
+    font-size:11px;
+    color:var(--sub);
+    margin-top:10px;
+    line-height:1.5;
+  }
+  .issue-box{
+    background:var(--card2);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px 14px;
+    margin-bottom:10px;
+  }
+  .issue-box:last-child{margin-bottom:0;}
+  .issue-box .tk{
+    display:inline-block;
+    font-size:12px;
+    font-weight:800;
+    color:#111;
+    background:var(--accent);
+    padding:2px 8px;
+    border-radius:6px;
+    margin-bottom:6px;
+  }
+  .issue-box p{margin:0;font-size:12.5px;line-height:1.6;color:var(--text);}
+  .summary-box{
+    background:linear-gradient(135deg,#1c2440,#141926);
+    border:1px solid var(--accent2);
+    border-radius:14px;
+    padding:18px;
+    font-size:14px;
+    line-height:1.7;
+    text-align:center;
+  }
+  .footer-note{
+    text-align:center;
+    color:var(--sub);
+    font-size:11px;
+    padding:20px 24px 0;
+    line-height:1.6;
+  }
+  .kr-analysis p{
+    font-size:13px;
+    line-height:1.7;
+    margin:0 0 10px;
+  }
+  .kr-analysis p:last-child{margin-bottom:0;}
+  .tag{
+    display:inline-block;
+    background:var(--card2);
+    border:1px solid var(--border);
+    color:var(--accent2);
+    font-size:10px;
+    padding:2px 7px;
+    border-radius:20px;
+    margin-right:4px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="card cover">
+    <span class="badge">US MARKET CLOSE · 9/14(월) 마감</span>
+    <h1>미국증시 마감 브리핑</h1>
+    <div class="date">2026년 9월 15일(화) · 한국시간 오전 브리핑</div>
+    <div class="note">미 동부시간 9/14(월) 정규장 마감 기준(신규 세션)<br>AI 3대장(앤트로픽 아모데이·오픈AI 알트먼·스페이스X 머스크)이 일제히 "AI 개발 속도 조절" 필요성을 제기하며 반도체·AI주가 급락(SMH -4%)한 반면, 소프트웨어·보안주는 급등(크라우드스트라이크 +10.5%)했다. 美10년물 국채금리는 장중 5%를 잠시 돌파(2023년來 최고)했고, 사우디의 송유관 폐쇄 소식에 유가도 급등했다. 3대지수는 일제히 하락(다우 -0.29%·S&amp;P -0.48%·나스닥 -0.56%). 이번 주 화~수 FOMC 회의, 금리결정은 목요일 새벽(한국시간) 발표된다.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">📊 3대 지수 &amp; 변동성</h2>
+    <div class="idx-grid">
+      <div class="idx-box">
+        <div class="name">다우존스</div>
+        <div class="val">52,421.20</div>
+        <div class="chg down">▼ 152.09 (-0.29%)</div>
+      </div>
+      <div class="idx-box">
+        <div class="name">S&amp;P 500</div>
+        <div class="val">7,619.98</div>
+        <div class="chg down">▼ 37.00 (-0.48%)</div>
+      </div>
+      <div class="idx-box">
+        <div class="name">나스닥종합</div>
+        <div class="val">26,186.41</div>
+        <div class="chg down">▼ 146.62 (-0.56%)</div>
+      </div>
+      <div class="idx-box">
+        <div class="name">러셀2000</div>
+        <div class="val">2,892.24</div>
+        <div class="chg down">▼ 11.71 (-0.40%)</div>
+      </div>
+    </div>
+    <div class="idx-box" style="margin-top:10px;">
+      <div class="name">VIX (공포지수)</div>
+      <div class="val">17.13<span class="up" style="font-size:13px;"> ▲ 1.29 (+8.15%)</span></div>
+    </div>
+    <div class="note-small">앤트로픽 CEO 다리오 아모데이가 주말 사이 "AI 개발 속도 조절"을 촉구하는 에세이를 발표했고, 오픈AI 알트먼·스페이스X 머스크도 유사한 우려를 표하며 반도체·AI 인프라주(엔비디아 -3.36%, AMD -4.40%, 인텔·브로드컴 동반 급락)가 급락했다. 반면 사이버보안·소프트웨어주(크라우드스트라이크 +10.5%, 팔로알토 +9.0%, 젠스케일러 +16.8%)는 급등하며 순환매가 뚜렷했다. 美10년물 국채금리는 장중 한때 5.01%까지 올라 2023년 이후 최고치를 기록했다가 4.9%대로 되밀렸다.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">🌙 밤사이 주요 뉴스</h2>
+    <div class="news-item"><b>AI 리더들, 일제히 "개발 속도 조절" 촉구:</b> 앤트로픽 CEO 다리오 아모데이가 안전 문제를 이유로 AI 프론티어 모델 개발 속도를 늦춰야 한다는 에세이를 발표했고, 오픈AI 샘 알트먼("통제력을 잃을 수 있다")과 스페이스X 일론 머스크가 이에 동조했다. 트럼프 대통령은 "속도 조절은 불필요하며 중국에 뒤처지게 만들 것"이라며 강하게 반박, 트루스소셜에 "AI에 대한 병적인 음모론이 있다"고 비판했다. 이 여파로 반도체·AI 인프라주가 전반적으로 급락했다.</div>
+    <div class="news-item"><b>美 10년물 국채금리, 2023년來 처음 5% 돌파:</b> 이번 주 FOMC 회의(9/15~16)를 앞두고 10년물 국채금리가 장중 5.01%까지 상승하며 2023년 10월 이후 최고치를 기록했다. 8월 CPI 서프라이즈로 9월 FOMC 금리인상 확률이 약 85%까지 형성된 가운데, 유가 급등에 따른 인플레이션 우려가 겹치며 금리 상승 압력이 커졌다.</div>
+    <div class="news-item"><b>중동 리스크 재점화, 유가 급등:</b> 사우디아라비아가 이라크發 드론 공격을 이유로 주요 송유관을 일시 폐쇄했고, 예멘 후티 반군이 사우디 카미스 무샤이트 소재 킹 칼리드 공군기지에 대규모 미사일·드론 공격을 감행했다고 발표했다. 브렌트유는 장중 $108을 상회하며 이번 주만 약 9% 급등, WTI도 $102선 부근에서 거래됐다.</div>
+    <div class="news-item"><b>마이크로소프트, 자체 AI 행동강령 발표:</b> MS가 자사 AI 모델(MAI)에 대해 "인간이 항상 통제권을 유지해야 한다"는 취지의 37페이지 분량 '휴머니스트 AI 행동강령' 초안을 공개했다. 사티아 나델라 CEO는 "속도 조절이 필요하다는 데 공감한다"고 밝히며 업계의 AI 안전 논쟁에 동참했다.</div>
+    <div class="news-item"><b>[보유종목] 넥스트에라·도미니언, 버지니아 혜택 패키지 확대 발표:</b> 넥스트에라 에너지(NEE)와 도미니언 에너지가 670억달러 규모 합병 승인을 앞당기기 위해 버지니아주에 연간 최대 10억달러 규모의 공급자 프로그램 등 확대된 주민 혜택 패키지를 공동 제안했다.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">💼 보유 종목 현황</h2>
+    <table>
+      <tr>
+        <th style="text-align:left;">종목</th>
+        <th>현재가</th>
+        <th>당일</th>
+        <th>1개월*</th>
+        <th>3개월*</th>
+        <th>6개월*</th>
+        <th>1년</th>
+      </tr>
+      <tr>
+        <td class="name-cell"><a href="https://m.stock.naver.com/worldstock/stock/NEE.N/total" target="_blank">NEE</a><span class="krw">₩109,757</span></td>
+        <td>$81.64</td>
+        <td class="down">-0.82%</td>
+        <td class="down">-7.34%</td>
+        <td class="down">-3.95%</td>
+        <td class="up">+0.45%</td>
+        <td class="up">+14.34%</td>
+      </tr>
+      <tr>
+        <td class="name-cell"><a href="https://m.stock.naver.com/worldstock/stock/SDGR.O/total" target="_blank">SDGR</a><span class="krw">₩27,896</span></td>
+        <td>$20.75</td>
+        <td class="up">+9.10%</td>
+        <td class="up">+38.18%</td>
+        <td class="up">+31.62%</td>
+        <td class="up">+23.25%</td>
+        <td class="up">+3.92%†</td>
+      </tr>
+      <tr>
+        <td class="name-cell"><a href="https://m.stock.naver.com/worldstock/stock/META.O/total" target="_blank">META</a><span class="krw">₩894,833</span></td>
+        <td>$665.60</td>
+        <td class="up">+2.71%</td>
+        <td class="up">+3.40%</td>
+        <td class="up">+17.19%</td>
+        <td class="up">+5.58%</td>
+        <td class="down">-11.91%</td>
+      </tr>
+      <tr>
+        <td class="name-cell"><a href="https://m.stock.naver.com/worldstock/stock/GOOGL.O/total" target="_blank">GOOGL</a><span class="krw">₩469,810</span></td>
+        <td>$349.39</td>
+        <td class="up">+3.22%</td>
+        <td class="up">+0.68%</td>
+        <td class="down">-2.27%</td>
+        <td class="up">+22.01%</td>
+        <td class="up">+45.10%</td>
+      </tr>
+      <tr>
+        <td class="name-cell"><a href="https://m.stock.naver.com/worldstock/stock/AMD.O/total" target="_blank">AMD</a><span class="krw">₩663,540</span></td>
+        <td>$493.41</td>
+        <td class="down">-4.40%</td>
+        <td class="down">-9.38%</td>
+        <td class="up">+1.13%</td>
+        <td class="up">+52.43%</td>
+        <td class="up">+211.16%</td>
+      </tr>
+    </table>
+    <div class="note-small">종목명 클릭 시 네이버증권 해외주식 페이지로 이동. 가격·등락률은 9/14(월) 정규장 마감 기준(현지시간). 원화 환산은 원/달러 1,344.4원 기준.<br>* 1개월·3개월·6개월은 전일 대비 종가 변동률을 반영한 근사치 추정입니다. 1년 수익률은 거래소 통계 페이지 기준 최신 확정치입니다. † SDGR 1년 수익률은 통계 페이지 갱신치로, 최근 1~6개월 단기 반등폭(+23~38%)과는 별개 지표입니다.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">🔍 보유종목 이슈</h2>
+    <div class="issue-box">
+      <span class="tk">NEE -0.82%</span>
+      <p>넥스트에라와 도미니언 에너지가 670억달러 규모 합병 승인을 앞당기기 위해 버지니아주에 연간 최대 10억달러 규모의 공급자 프로그램을 포함한 확대된 주민 혜택 패키지를 공동 제안했다. 경영진은 9~10월 다수의 투자자 미팅에 나설 예정이다.</p>
+    </div>
+    <div class="issue-box">
+      <span class="tk">SDGR +9.10%</span>
+      <p>전반적인 시장 약세 속에서도 홀로 급등했다. 모건스탠리 24차 연례 글로벌 헬스케어 콘퍼런스 발표에서 AI 코사이언티스트 '분젠' 도입 확대, 호스팅 소프트웨어 채택 가속, 2028년까지 흑자전환 목표 등이 긍정적으로 평가된 것으로 풀이된다.</p>
+    </div>
+    <div class="issue-box">
+      <span class="tk">META +2.71%</span>
+      <p>AI 개발 속도 조절 논쟁에서 상대적으로 컴퓨팅 집약도가 낮은 빅테크로 분류되며 반사이익을 누렸다. 골드먼삭스는 AI 에이전트 '뮤즈' 흥행과 최근 법적 합의를 근거로 강세 의견을 재확인했다.</p>
+    </div>
+    <div class="issue-box">
+      <span class="tk">GOOGL +3.22%</span>
+      <p>웨이모 로보택시 서비스가 라스베이거스로 확장(미국 15번째 도시)됐고, AI 에이전트 스타트업 '메카나이즈' 15억달러+ 인수를 완료했다는 소식이 겹쳤다. META와 함께 AI 슬로우다운 우려의 반사수혜주로 거론됐다.</p>
+    </div>
+    <div class="issue-box">
+      <span class="tk">AMD -4.40%</span>
+      <p>아모데이·알트먼의 AI 속도조절 촉구 여파로 반도체 업종 전반이 급락하는 가운데 동반 하락했다. 엔비디아(-3.36%)·인텔·브로드컴 등도 일제히 약세를 보였다. 다만 최근 제시한 AI TAM 3조달러 전망 등 펀더멘털 스토리는 유효하다는 평가다.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">🚀 빅테크 &amp; 스페이스X</h2>
+    <table>
+      <tr>
+        <th style="text-align:left;">종목</th>
+        <th>현재가</th>
+        <th>당일 등락</th>
+      </tr>
+      <tr><td class="name-cell">AAPL</td><td>$333.08</td><td class="up">+0.24%</td></tr>
+      <tr><td class="name-cell">MSFT</td><td>$505.41</td><td class="up">+1.97%</td></tr>
+      <tr><td class="name-cell">AMZN</td><td>$253.54</td><td class="down">-1.26%</td></tr>
+      <tr><td class="name-cell">GOOGL</td><td>$349.39</td><td class="up">+3.22%</td></tr>
+      <tr><td class="name-cell">META</td><td>$665.60</td><td class="up">+2.71%</td></tr>
+      <tr><td class="name-cell">NVDA</td><td>$210.96</td><td class="down">-3.36%</td></tr>
+      <tr><td class="name-cell">TSLA</td><td>$358.97</td><td class="down">-1.77%</td></tr>
+      <tr><td class="name-cell">SpaceX(SPCX)</td><td>$148.15</td><td class="down">-2.02%</td></tr>
+    </table>
+    <div class="note-small">가격은 9/14(월) 마감 기준. AI 슬로우다운 논쟁 속에 GOOGL·META·MSFT는 상승한 반면, 컴퓨팅 인프라 비중이 큰 NVDA·TSLA·SPCX는 하락하는 뚜렷한 종목간 차별화가 나타났다.</div>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-title">🛢️ 원자재 · 금리 · 환율</h2>
+    <table>
+      <tr><th style="text-align:left;">항목</th><th>현재가</th><th>등락</th></tr>
+      <tr><td class="name-cell">금(Gold)</td><td>$4,326.60/oz</td><td class="down">-1.87%</td></tr>
+      <tr><td class="name-cell">은(Silver)</td><td>$63.30/oz</td><td class="down">-1.51%</td></tr>
+      <tr><td class="name-cell">구리(Copper)</td><td>$6.28/lb</td><td class="down">-2.86%</td></tr>
+      <tr><td class="name-cell">알루미늄</td><td>$3,257.10/톤</td><td class="up">+0.01%</td></tr>
+      <tr><td class="name-cell">천연가스</td><td>$2.88/MMBtu</td><td class="up">+1.78%</td></tr>
+      <tr><td class="name-cell">WTI유</td><td>$101.74/배럴</td><td class="up">+1.69%</td></tr>
+      <tr><td class="name-cell">브렌트유</td><td>$107.54/배럴</td><td class="up">+2.90%</td></tr>
+      <tr><td class="name-cell">美 2년물</td><td>4.66%</td><td class="up">▲2bp</td></tr>
+      <tr><td class="name-cell">美 10년물</td><td>4.96%</td><td class="up">장중 5.01%(2023年來 최고)</td></tr>
+      <tr><td class="name-cell">美 30년물</td><td>5.35%</td><td class="down">보합권</td></tr>
+      <tr><td class="name-cell">USD/KRW</td><td>1,344.4원</td><td class="up">약보합</td></tr>
+    </table>
+    <div class="note-small">유가·금리·환율 수치는 9/14(월) 정규장/외환시장 마감 기준. 중동 리스크(사우디 송유관 폐쇄, 후티 공격)로 유가가 급등했고, FOMC(9/15~16)를 앞두고 10년물 금리가 장중 2023년來 최고치(5.01%)를 기록했다. 금·은은 안전자산 선호 완화 속 하락, 산업금속(구리)도 약세.</div>
+  </div>
+
+  <div class="card kr-analysis">
+    <h2 class="sec-title">🇰🇷 한국증시 영향 분석</h2>
+    <p><span class="tag">반도체주 순환매 경계</span> AI 리더들의 "개발 속도 조절" 촉구로 美 반도체·AI 인프라주가 급락한 여파가 한국 시간 개장 시 삼성전자·SK하이닉스 등 국내 메모리·AI 반도체주 투자심리에도 부담을 줄 수 있습니다. 다만 소프트웨어·보안주로의 순환매 흐름이 국내 관련주(보안·클라우드)에는 긍정적으로 작용할 여지도 있습니다.</p>
+    <p><span class="tag">FOMC 개막, 원화 변동성 확대 가능</span> 9월 FOMC 회의가 오늘(화)부터 이틀간 열리며, 금리결정은 한국시간 목요일(9/17) 새벽 발표됩니다. 10년물 금리가 장중 2023년來 최고치를 기록한 만큼, 결과 발표 전후로 원/달러 환율과 국내 채권시장의 변동성이 커질 수 있습니다.</p>
+    <p><span class="tag">유가 급등, 수입물가 부담</span> 중동 정세 악화로 브렌트유가 이번 주 9% 가까이 급등했습니다. 원유 수입 의존도가 높은 한국 경제에는 수입물가·물류비 상승 압박으로 작용할 수 있어 정유·항공·물류 업종의 수익성에 유의할 필요가 있습니다.</p>
+    <p><span class="tag">AI 밸류에이션 재평가 국면</span> 앤트로픽·오픈AI 등 AI 리더들의 속도조절 촉구는 글로벌 AI 밸류에이션 논쟁을 재점화시켰습니다. 국내 AI 관련주(반도체·데이터센터·전력인프라)의 밸류에이션에도 영향을 줄 수 있어, 개별 종목의 펀더멘털과 밸류에이션을 재점검할 시점입니다.</p>
+    <p><span class="tag">다음 변수</span> 오늘(화)부터 이틀간 FOMC 회의, 수요일(9/16) 밤 금리결정(한국시간 목요일 새벽 3시경), 유가·중동 정세 추이가 이번 주 최대 변수입니다.</p>
+  </div>
+
+  <div class="card">
+    <div class="summary-box">
+      💬 [9/14(월) 마감 기준] AI 리더들의 "속도조절" 촉구로 반도체·AI인프라주 급락(엔비디아 -3.36%·AMD -4.40%), 소프트웨어·보안주는 급등하며 순환매 뚜렷. 10년물 금리 장중 2023年來 첫 5% 돌파, 중동發 유가 급등(브렌트 +2.9%)까지 겹쳐 3대지수 동반 하락(다우 -0.29%·S&amp;P -0.48%·나스닥 -0.56%). 오늘부터 이틀간 FOMC, 수요일 밤 금리결정.
+    </div>
+  </div>
+
+  <div class="footer-note">
+    본 브리핑은 투자 판단의 참고 자료이며 투자 권유가 아닙니다. 수치는 공개 시세·보도 기준이며 일부 항목(†표시)은 확인 시점·참조가에 따라 실제와 오차가 있을 수 있습니다.<br><br>
+    미국증시 브리핑 · nossang123451
+  </div>
+
+</div>
+</body>
+</html>
